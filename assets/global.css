@@ -1108,10 +1108,26 @@ footer {
 .banner__inner-wrapper > * {
   color: inherit;
 }
+.banner__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
 .banner__desc {
   margin-top: 16px;
 }
-
+.banner__footer {
+  margin-top: 40px;
+}
+.banner__desc p,
+.banner__footer p {
+  margin-bottom: .75rem;
+}
+.banner__desc p:last-child,
+.banner__footer p:last-child {
+  margin-bottom: 0;
+}
 .site-faq__list {
   padding: 16px 0;
   max-width: 900px;

@@ -8,7 +8,15 @@
   --zesty-cucumber-lemon: #FCFBD2;
   --mixie: #FFB5CC;
 }
-
+.template-thank-you .banner .banner__inner-wrapper {
+  background-color: #FFFFFF;
+  color: #1B1B1B;
+  border: 1px solid #1B1B1B;
+}
+.template-thank-you .banner .banner__desc,
+.template-thank-you .banner .banner__footer {
+  color: #717171;
+}
 .thank-you__hero {
   padding-block: 0 12px;
 }

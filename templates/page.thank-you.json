@@ -13,8 +13,9 @@
     "banner": {
       "type": "components-banner",
       "settings": {
-        "collection_banner_title": "Thank you for your purchase!",
-        "collection_banner_desc": "<p>Your order has been received — pure hydration and collagen-powered glow will be with you soon.</p>"
+        "collection_banner_title": "Hydration, with intention.",
+        "collection_banner_desc": "<p>In Japanese philosophy, water represents clarity, adaptability, and flow.</p><p>40-LOVE was created to help you stay present — in movement, in recovery, and in life.</p><p>Thank you for choosing hydration that supports your <strong>mind</strong>, <strong>body</strong>, and <strong>soul</strong>.</p>",
+        "collection_banner_footer": "<p>Drink slowly.</p><p>Move intentionally.</p><p>Recover fully.</p>"
       }
     },
     "hero-banner": {
