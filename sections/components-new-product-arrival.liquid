@@ -47,7 +47,10 @@
     {% endif %}
     <section class="new-product__grid">
         <div class="container">
-            <div class="new-product__grid--wrapper">        
+            <div class="new-product__grid--wrapper">
+                {% if section.settings.section_title != blank %}
+                <h1 class="section-title">{{ section.settings.section_title }}</h1>
+                {% endif %}
                 <div class="product-card__list">
                     {% for product in product_collections limit: limit %}
                         {% assign product_image_url = product.featured_image | img_url: '500x' %}
@@ -69,6 +72,11 @@
 {
     "name": "New Product Arrival",
     "settings": [
+        {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title"
+        },
         {
             "type": "product", 
             "id": "new_arrival",
