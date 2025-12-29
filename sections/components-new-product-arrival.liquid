@@ -59,7 +59,10 @@
                             product_image: product_image_url,`
                             product_title: product.title,
                             product_price: product.price,
-                            product_link: product.url
+                            product_link: product.url,
+                            show_product_delivery_timeline: section.settings.show_product_delivery_timeline,
+                            product_delivery_timeline: product.metafields.custom.delivery_timeline,
+                            button_label_prefix: section.settings.button_label_prefix
                         %}
                     {% endfor %}
                 </div>
@@ -98,7 +101,19 @@
             "id": "show_slider",
             "label": "Show Product Slider",
             "default": true
-        }
+        },
+        {
+            "type": "checkbox", 
+            "id": "show_product_delivery_timeline",
+            "label": "Show Product Delivery Timeline",
+            "default": false
+        },
+        {
+            "type": "text",
+            "id": "button_label_prefix",
+            "label": "Button Label Prefix",
+            "default": "GET "
+        },
     ],
     "presets": [
         {

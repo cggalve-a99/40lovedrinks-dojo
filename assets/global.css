@@ -827,13 +827,16 @@ p {
 }
 .product-card__item--header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 .product-card__item--header .site-title__md {
   font-weight: 400;
 }
-.product-card__item--header span {
-  display: block;
-  margin: 8px 0 24px;
+.product-card__item--header .product-card__item--price {
+  font-size: 24px;
 }
 .product-card__item .btn {
   margin-inline: auto;

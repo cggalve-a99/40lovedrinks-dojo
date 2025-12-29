@@ -10,7 +10,7 @@
             <div class="flex flex-wrap align-stretch formula__list">
                 {% for block in section.blocks %}
                     {%  assign icon = block.settings.key_icon %}
-                    <div class="flex flex-col formula__item">
+                    <div class="flex flex-col formula__item align-center text-center">
                         <div class="formula__item--image">
                             {{ icon | inline_asset_content }}
                         </div>

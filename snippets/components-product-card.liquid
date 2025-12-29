@@ -12,9 +12,12 @@
     </div>
     <div class="product-card__item--header">
         <h3 class="site-title__md">{{ product_title }}</h3>
-        <span>{{ product_price | money }}</span>
+        {% if show_product_delivery_timeline and product_delivery_timeline != blank %}
+        <div class="product-card__item--timeline">{{ product_delivery_timeline }}</div>
+        {% endif %}
+        <span class="product-card__item--price">{{ product_price | money }}</span>
     </div>
     <a href="{{ product_link }}" class="btn white bordered-black">
-        {{ 'GET ' |  append: button_label[0] }}
+        {{ button_label_prefix | append: ' ' | append: button_label[0] }}
     </a>
 </article>
