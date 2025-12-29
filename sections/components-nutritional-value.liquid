@@ -1,0 +1,50 @@
+<section class="product__ingredients">
+    <div class="container">
+        <img 
+            src="{{ section.settings.ingredients_banner_image |  img_url: '500x' }}" 
+            alt="Ingredients Banner Image"
+            width="218"
+            height="371"
+            class="product__ingredients--image"
+        >
+        <div class="flex flex-col justify-center align-center product__ingredients--list">
+            {% for block in section.blocks %}
+                <div class="product__ingredients--list-item">
+                    <h4>{{ block.settings.volume }}</h4>
+                    <span>{{ block.settings.name }}</span>
+                </div>        
+            {% endfor %}   
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Ingredients",
+    "settings": [
+        {
+            "type": "image_picker", 
+            "id": "ingredients_banner_image",
+            "label": "Image"
+        }        
+    ],
+    "blocks": [
+        {
+            "type": "ingredient",
+            "name": "Ingredient", 
+            "settings": [
+                {
+                    "type": "text", 
+                    "id": "name", 
+                    "label": "Ingredient's Name"
+                }, 
+                {
+                    "type": "text", 
+                    "id": "volume", 
+                    "label": "Ingredient's Volume"
+                }
+            ]    
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,26 @@
+<section class="collection__banner">
+    <div class="collection__banner--inner-wrapper">
+        <h1 class="site-title__xl">{{ section.settings.collection_banner_title }}</h1>
+        <div class="collection__banner--desc">
+            {{ section.settings.collection_banner_desc }}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Collection Banner",
+    "settings": [
+        {
+            "type": "text", 
+            "id": "collection_banner_title",
+            "label": "Title"
+        }, 
+        {
+            "type": "richtext",
+            "id": "collection_banner_desc", 
+            "label": "Description"
+        }
+    ]
+}
+{% endschema %}

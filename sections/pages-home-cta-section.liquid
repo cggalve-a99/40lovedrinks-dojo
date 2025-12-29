@@ -1,0 +1,76 @@
+<section class="homepage__cta-section">
+    <div class="container homepage__cta-section--inner-wrapper">
+        <div class="flex align-stretch justify-center flex-wrap homepage__cta-section--card-list">
+            <div class="flex flex-col homepage__cta-section--card">
+                <div class="homepage__cta-section--card-text">
+                    <h2 class="site-title__lg">{{ section.settings.cta_1_title }}</h2>
+                    <div class="homepage__cta-section--description">
+                        {{ section.settings.cta_1_description }}
+                    </div>
+                </div>
+                <a class="btn" href="{{ section.settings.cta_1_button_link }}">
+                    {{ section.settings.cta_1_button_label }}
+                </a>
+            </div>
+            <div class="flex flex-col homepage__cta-section--card">
+                <div class="homepage__cta-section--card-text">
+                    <h2 class="site-title__lg">{{ section.settings.cta_2_title }}</h2>
+                    <div class="homepage__cta-section--description">
+                        {{ section.settings.cta_2_description }}
+                    </div>
+                </div>
+                <a class="btn" href="{{ section.settings.cta_2_button_link }}">
+                    {{ section.settings.cta_2_button_label }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "CTA Section",
+    "settings": [
+        {
+            "type": "text", 
+            "id": "cta_1_title",
+            "label": "CTA 1 Title"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "cta_1_description",
+            "label": "CTA 1 Description"
+        },
+        {
+            "type": "text", 
+            "id": "cta_1_button_label", 
+            "label": "CTA 1 Button Label"
+        },
+        {
+            "type": "text", 
+            "id": "cta_1_button_link", 
+            "label": "CTA 1 Button Link"
+        },
+        {
+            "type": "text", 
+            "id": "cta_2_title",
+            "label": "CTA 2 Title"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "cta_2_description",
+            "label": "CTA 2 Description"
+        },
+        {
+            "type": "text", 
+            "id": "cta_2_button_label", 
+            "label": "CTA 2 Button Label"
+        },
+        {
+            "type": "text", 
+            "id": "cta_2_button_link", 
+            "label": "CTA 2 Button Link"
+        }
+    ]
+}
+{% endschema %}

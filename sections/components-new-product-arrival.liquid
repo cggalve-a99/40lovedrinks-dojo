@@ -1,0 +1,101 @@
+{% if section.settings.new_arrival != blank %}
+{% assign newProduct = all_products[section.settings.new_arrival] %}
+
+<section class="new-product">
+    <div class="container new-product__inner-wrapper">
+        <div class="new-product__content">
+            <div class="new-product__text-wrapper">
+                <div class="new-product__text-content">
+                    <span>New Arrival</span>
+                    <h3>{{ newProduct.title }}</h3>
+                    <div class="new-product__desc">
+                        {{ newProduct.description }}
+                    </div>
+                    <a class="btn" href="{{ newProduct.url }}">
+                        Get {{ newProduct.title }} for only {{ product.price | money }}
+                    </a>
+                </div>
+            </div>
+            <div class="new-product__image">
+                <img 
+                    src="{{ newProduct.featured_image | img_url: '500x' }}" 
+                    alt="{{ newProduct.title }}"
+                    width="612"
+                    height="334"
+                >
+                <div class="new-product__banner">
+                    {% for i in (1..10) %}
+                        <span>New Arrival</span> {{ 'icon-lighting.svg' | inline_asset_content }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% if section.settings.show_slider and section.settings.slider_collection != blank %}
+            {% render 'components-product-slider' %}
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+{% if section.settings.show_slider == false %}
+
+    {% assign limit = section.settings.product_limit | default: 6 %}
+    {% assign product_collections = collection.products %}
+
+    {% if section.settings.slider_collection != blank %}
+        {% assign product_collections = collections[section.settings.slider_collection].products %}
+    {% endif %}
+    <section class="new-product__grid">
+        <div class="container">
+            <div class="new-product__grid--wrapper">        
+                <div class="product-card__list">
+                    {% for product in product_collections limit: limit %}
+                        {% assign product_image_url = product.featured_image | img_url: '500x' %}
+
+                        {% render 'components-product-card', 
+                            product_image: product_image_url,`
+                            product_title: product.title,
+                            product_price: product.price,
+                            product_link: product.url
+                        %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>  
+{% endif %}
+
+{% schema %}
+{
+    "name": "New Product Arrival",
+    "settings": [
+        {
+            "type": "product", 
+            "id": "new_arrival",
+            "label": "New Product Arrival"
+        }, 
+        {
+            "type": "collection", 
+            "id": "slider_collection",
+            "label": "Select Collection"
+        },
+        {
+            "type": "number",
+            "id": "product_limit",
+            "label": "Number of Products",
+            "default": 3
+        }, 
+        {
+            "type": "checkbox", 
+            "id": "show_slider",
+            "label": "Show Product Slider",
+            "default": true
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Slider"
+        }
+    ]
+}
+{% endschema %}

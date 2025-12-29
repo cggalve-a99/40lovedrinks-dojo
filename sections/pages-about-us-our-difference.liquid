@@ -1,0 +1,44 @@
+<section class="about__difference">
+    <div class="container">
+        <div class="flex align-stretch justify-between about__difference--inner-wrapper">
+            <div class="flex flex-col justify-center about__difference--text-content">
+                <h2 class="site-title__lg">{{ section.settings.diff_title }}</h2>
+                <div class="about__difference--description">
+                    {{ section.settings.diff_desc }}
+                </div>
+            </div>
+            <div class="about__difference--image">
+                <img 
+                    src="{{ section.settings.diff_image | img_url: '500x' }}" 
+                    alt="{{ section.settings.diff_title }}"
+                    width="620"
+                    height="500"
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Our Difference",
+    "settings": [
+        {
+            "type": "text", 
+            "id": "diff_title",
+            "label": "Title",
+            "default": "What Makes 40-Love Different?"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "diff_desc", 
+            "label": "Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "diff_image", 
+            "label": "Image"
+        }
+    ]
+}
+{% endschema %}

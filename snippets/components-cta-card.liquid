@@ -1,0 +1,57 @@
+{% assign card_class = 'with-media' %}
+
+{% if cta_image == blank and cta_video == blank %}
+    {% assign card_class = '' %}
+{% endif %}
+
+{% if cta_button_label == blank %}
+    {% assign card_class = card_class | append: ' no-button' %}
+{% endif %}
+
+<div class="flex flex-col cta-section__card {{ card_class }}">
+    {% # if title is not empty # %}
+    {% if cta_title != blank %}
+    <div class="cta-section__card--text">
+        <h2 class="site-title__lg">
+            {{ cta_title }}
+        </h2>
+        <div class="cta-section__description {{ card_class }}">
+            {{ cta_description }}
+        </div>
+    </div>
+    {% endif %}
+    {% # if cta_image is not # %}
+    {% if cta_image != blank %}
+    <div class="cta-section__image">
+        <img 
+            src="{{ cta_image | img_url: '400x' }}" 
+            alt="{{ cta_title }}" 
+            class="cta-section__card-image"
+            width="100%"
+            height="100%"
+        />
+    </div>
+    {% endif %}
+    {% # if cta_video is not # %}
+    {% if cta_video != blank %}
+    <div class="cta-section__video">
+        <video 
+            id="cta-video-player" 
+            width="716" 
+            height="482" 
+            playsinline
+            autoplay
+            loop
+            muted
+            preload="auto"
+        >
+            <source src="{{ cta_video }}" type="video/mp4">
+        </video>
+    </div>
+    {% endif %}
+    {% if cta_button_label != blank %}
+        <a class="btn" href="{{ cta_button_link }}">
+            {{ cta_button_label }}
+        </a>
+    {% endif %}
+</div>

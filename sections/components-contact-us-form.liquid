@@ -1,0 +1,68 @@
+<section class="contact-us">
+    <div class="container">
+        <div class="contact-us__inner-wrapper">
+            <div class="contact-us__form-container">
+                <div class="contact-us__header">
+                    <h2 class="site-title__lg">{{ section.settings.contact_title }}</h2>
+                    <div class="contact-us__desc">
+                        {{ section.settings.contact_desc }}
+                    </div>
+                </div>
+                {% form  'contact', id: 'contact-us', class: 'form' %}
+                    <input type="hidden" name="contact[tags]" value="inquiry">                    
+                    <div class="form__stacked">
+                        <div class="form__group--inline">
+                            <div class="form__control bordered-black rounded">
+                                <input type="text" name="contact[full_name]" id="" placeholder="Enter Name">               
+                            </div>
+                            <div class="form__control bordered-black rounded">
+                                <input type="email" name="contact[email]" id="" placeholder="Enter Email">               
+                            </div>
+                        </div>
+                        <div class="form__control bordered-black rounded">
+                            <input type="text" name="contact[order_number]" id="" placeholder="Order Number (if applicable)">
+                        </div>
+                        <div class="form__control bordered-black rounded">
+                            <textarea name="contact[message]" id="" placeholder="Message"></textarea>
+                        </div>
+                        <div class="flex align-center form__submit">
+                            <button type="submit" class="btn full">{{ section.settings.contact_button_label }}</button>
+                        </div>
+                    </div>
+                    {% if form.posted_successfully? %}
+                        <p class="form__alert--success">Thanks! We’ll get back to you shortly.</p>
+                    {% endif %}
+                    {% if form.errors %}
+                        <div class="form__alert--error">
+                            {{ form.errors | default_errors }}
+                        </div>
+                    {% endif %}
+                {% endform %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Contact Us Section",
+    "settings": [
+        {
+            "type": "text", 
+            "id": "contact_title", 
+            "label": "Title"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "contact_desc",
+            "label": "Description"
+        }, 
+        {
+            "type": "text", 
+            "id": "contact_button_label", 
+            "label": "Button Label", 
+            "default": "Submit"
+        }
+    ]
+}
+{% endschema %}

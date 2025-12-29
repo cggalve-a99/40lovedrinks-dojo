@@ -1,0 +1,63 @@
+<section class="coming-soon">
+    <div class="container">
+        <div class="coming-soon__inner-wrapper">
+            <div class="coming-soon__banner">
+                <img 
+                    src="{{ section.settings.banner_image | image_url }}" 
+                    alt="Banner Image"
+                    class="coming-soon__banner--image"
+                    width="215"
+                    height="215"
+                >
+            </div>
+            <div class="coming-soon__banner--title">
+                <h1 class="site-title__xl">{{ section.settings.banner_title }}</h1>
+            </div>
+            <div class="coming-soon__banner-desc">
+                <p>{{ section.settings.banner_desc }}</p>
+            </div>
+            <div class="coming-soon__banner--form">
+                {% form 'customer', id: 'newsletter-form', class: 'form' %} 
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <div class="form__control bordered-black">
+                        <input type="email" name="contact[email]" placeholder="Email address" required>
+                    </div>
+                    <div class="flex align-center form__submit">
+                        <button type="submit" class="btn full">Get 10% Off at Launch</button>
+                    </div>
+                    {% if form.posted_successfully? %} 
+                        <p class="newsletter-success">Thank you for subscribing!</p> 
+                    {% elsif form.errors %}
+                        <p class="newsletter-error">{{ form.errors | default_errors }}</p> 
+                    {% endif %} 
+                {% endform %}
+                <p class="coming-soon__banner--disclaimer text-center">
+                    Formulated with premium Japanese ingredients.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Banner", 
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "banner_image",
+            "label": "Banner Image"
+        },
+        {
+            "type": "text",
+            "id": "banner_title",
+            "label": "Banner Title"
+        }, 
+        {
+            "type": "richtext",
+            "id": "banner_desc",
+            "label": "Banner Description"
+        }
+    ]
+}
+{% endschema %}

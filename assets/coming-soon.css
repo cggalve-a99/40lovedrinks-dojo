@@ -1,0 +1,94 @@
+/** Breakpoints **/
+:root {
+  --zesty-coconut: #E5FFF2;
+  --zesty-coconut-50: #00B75B;
+  --zesty-coconut-80: #42643E;
+  --zesty-lychee: #FFE8EF;
+  --winty: #FBDEC0;
+  --zesty-cucumber-lemon: #FCFBD2;
+  --mixie: #FFB5CC;
+}
+
+.coming-soon {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 128px;
+}
+.coming-soon .site-title__xl {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.9px;
+  text-transform: capitalize;
+}
+.coming-soon__inner-wrapper {
+  max-width: 640px;
+  width: 100%;
+  margin-inline: auto;
+}
+.coming-soon__banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 2px solid var(--color-primary);
+  background: #F2F2F2;
+}
+.coming-soon__banner--image {
+  position: relative;
+  width: 215px;
+  height: 215px;
+  margin-inline: auto;
+  z-index: 50;
+}
+.coming-soon__banner::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(270deg, #AFAFAF 1.46%, #FFF 26.46%, #FFF 69.14%, #AFAFAF 97.89%);
+  height: 151px;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+.coming-soon__banner--title {
+  margin: 24px 0 8px;
+}
+.coming-soon__banner--form {
+  margin-top: 24px;
+}
+.coming-soon__banner--form #newsletter-form {
+  width: 100%;
+}
+.coming-soon__banner--form .btn {
+  margin-top: 24px;
+  width: auto;
+  border-radius: 1000px;
+  flex-grow: 1;
+}
+.coming-soon__banner--form .form__control {
+  border-radius: 8px;
+}
+.coming-soon__banner .form__submit {
+  width: 100%;
+}
+.coming-soon__banner--disclaimer {
+  margin-top: 24px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+@media screen and (min-width: 541px) {
+  .coming-soon {
+    margin-top: 152px;
+  }
+  .coming-soon__banner--image {
+    width: 430px;
+    height: 430px;
+  }
+  .coming-soon__banner::before {
+    height: 302px;
+  }
+}

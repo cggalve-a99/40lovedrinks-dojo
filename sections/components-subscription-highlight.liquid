@@ -1,0 +1,62 @@
+<section class="position-relative container subscription-highlight">
+    <div class="subscription-highlight__inner-wrapper">
+        <div class="subscription-highlight__text-wrapper">
+            <div class="subscription-highlight__text-content">
+                <h2 class="site-title__lg">{{ section.settings.subscription_title }}</h2>
+                <div class="subscription-highlight__description">
+                    {{ section.settings.subscription_desc }}
+                </div>
+                <a href="{{ section.settings.subscription_button_link }}" class="btn white">
+                    {{ section.settings.subscription_button_label }}
+                </a>
+            </div>
+        </div>
+        <div class="position-absolute subscription-highlight__background">
+            <video 
+                id="video-player" 
+                width="1440" 
+                height="600" 
+                playsinline
+                autoplay
+                loop
+                muted
+                preload="auto"
+            >
+                <source src="{{ 'subscription_video.mp4' | asset_url }}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Subscription Hightlight",
+    "settings": [
+        {
+            "type": "text", 
+            "id": "subscription_title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "subscription_desc",
+            "label": "Description"
+        }, 
+        {
+            "type": "video",
+            "id": "subscription_video", 
+            "label": "Video"
+        }, 
+        {
+            "type": "text", 
+            "id": "subscription_button_label",
+            "label": "Button Label"
+        },
+        {
+            "type": "text", 
+            "id": "subscription_button_link",
+            "label": "Button Link"
+        }
+    ]
+}
+{% endschema %}

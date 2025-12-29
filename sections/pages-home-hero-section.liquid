@@ -1,0 +1,70 @@
+<section class="homepage__hero">
+    <div class="container position-relative homepage__hero--wrapper">
+        <div class="position-absolute homepage__hero--background" style="background-image:url({{ section.settings.hero_background | image_url }})"></div>
+        <div class="container position-relative homepage__hero--inner-wrapper">
+            <div class="flex flex-col homepage__hero--text">
+                <div class="text-center homepage__hero--header">
+                    <h2 class="site-title__lg">{{ section.settings.hero_title }}</h2>
+                    <div class="homepage__hero--description">
+                        {{ section.settings.hero_description }}
+                    </div>
+                </div>
+                <div class="w-max-content mx-auto homepage__hero--button">
+                    <a class="btn" href="{{ section.settings.hero_button_link }}">
+                        {{ section.settings.hero_button_label }}
+                    </a>
+                </div>
+                <div class="position-relative homepage__hero--image">
+                    <img 
+                        src="{{ section.settings.hero_image | image_url }}"
+                        alt="Hero Image"
+                        width="814"
+                        height="640"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Hero Section", 
+    "settings": [
+        {
+            "type": "text", 
+            "id": "hero_title",
+            "label": "Hero Section Title",
+            "default": "Fuel Your Day, The Hydrated Way"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "hero_description", 
+            "label": "Hero Section Description",
+            "default": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>"
+        }, 
+        {
+            "type": "text", 
+            "id": "hero_button_label", 
+            "label": "Hero Section Button Label", 
+            "default": "Shop All Flavors"
+        },
+        {
+            "type": "text", 
+            "id": "hero_button_link", 
+            "label": "Hero Section Button Link",
+            "default": "#"
+        },
+        {
+            "type": "image_picker", 
+            "id": "hero_image",
+            "label": "Hero Image"
+        },
+        {
+            "type": "image_picker", 
+            "id": "hero_background", 
+            "label": "Hero Background"
+        }
+    ]
+}
+{% endschema %}

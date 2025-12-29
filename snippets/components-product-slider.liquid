@@ -1,0 +1,47 @@
+{% assign collectionId = section.settings.slider_collection %}
+{% assign limit = section.settings.product_limit | default: 3 %}
+{% assign collection = collections[collectionId] %}
+
+<div class="product-slider">
+    <div class="splide product-slider-element" id="product-slider">
+        <div class="splide__track">
+            <div class="splide__list product-slider__list" id="product-slider">
+                {% for product in collection.products limit: limit %}
+                    {% assign button_label = product.title |  split: ' ' %}
+                    <div class="splide__slide flex flex-col product-slider__item">
+                        <div class="product-slider__item--image">
+                            <img 
+                                src="{{ product.featured_image | img_url: '500x' }}" 
+                                alt="{{ product.title }}"
+                                width="300"
+                                height="300"
+                            >
+                        </div>
+                        <div class="flex flex-col product-slider__item--content">
+                            <div class="product-slider__item--text">
+                                <div class="flex align-center justify-between flex-wrap product-slider__item--header">
+                                    <h4 class="site-title__md">{{ product.title }}</h4>
+                                    <h3 class="site-title__lg">{{ product.price | money }}</h3>
+                                </div>   
+                                <div class="product-slider__item--desc">
+                                    <p>{{ product.description }}</p>
+                                </div>                 
+                            </div>
+                            <a class="btn full" href="{{ product.url }}">
+                                Get {{ button_label[0] }}
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="product-slider__navigation">
+        <div class="btn circle transparent bordered-black product-slider__arrow" id="product-slider-prev" data-id="-1">
+            {{ 'icon-caret-left.svg' | inline_asset_content }}
+        </div>
+        <div class="btn circle transparent bordered-black product-slider__arrow" id="product-slider-next" data-id="+1">
+            {{ 'icon-caret-right.svg' | inline_asset_content }}
+        </div>
+    </div>
+</div>

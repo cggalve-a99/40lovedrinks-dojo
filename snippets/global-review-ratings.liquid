@@ -1,0 +1,15 @@
+<div class="review-ratings">
+    <div class="review-ratings__list">
+        {% for index in (1..5) %}
+            <div class="review-ratings__item">
+                {{ 'icon-star.svg' | inline_asset_content }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="review-ratings__text-content">
+        {{ section.settings.banner_review_writeup_1 }}
+    </div>
+    <div class="review-ratings__text-content">
+        {{ section.settings.banner_review_writeup_2 }}
+    </div>
+</div>

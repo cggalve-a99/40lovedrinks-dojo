@@ -1,0 +1,24 @@
+{% assign bg_color = 'color-secondary' %}
+{% assign border_color = 'color-primary' %}
+{% if background != blank %}
+    {% assign border_color = background | append: '-50' %}
+    {% assign bg_color = background | append: '-80' %}
+{% endif %}
+
+<div 
+    class="position-relative product__subscription" 
+    style="border-color: var(--{{ border_color }})"
+>
+    <h3>Subscribe & Save</h3>
+    <ul>
+        <li>Only ₱7/day for optimal hydration</li>
+        <li>Save 12% on subscription Plans</li>
+        <li>30 sachets every month</li>
+        <li>Pause or cancel anytime</li>
+    </ul>
+    <div class="product__subscription--banner" style="background-color: var(--{{ bg_color }})">
+        <span>Only</span>
+        <h4>₱7</h4>
+        <span>a day</span>
+    </div>
+</div>

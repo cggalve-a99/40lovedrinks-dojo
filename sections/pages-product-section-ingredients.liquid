@@ -1,0 +1,37 @@
+{% assign current_product = product %}
+{% assign ingredients = current_product.metafields.custom.ingredients.value %}
+
+{% if ingredients != blank %}
+    <section class="product__ingredients">
+        <div class="container">
+            <img 
+                src="{{ section.settings.ingredients_banner_image |  img_url: '500x' }}" 
+                alt="Ingredients Banner Image"
+                width="218"
+                height="371"
+                class="product__ingredients--image"
+            >
+            <div class="flex flex-col justify-center align-center product__ingredients--list">
+                {% for ingredient in ingredients %}
+                    <div class="product__ingredients--list-item">
+                        <h4>{{ ingredient.volume }}</h4>
+                        <span>{{ ingredient.name }}</span>
+                    </div>     
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Ingredients",
+    "settings": [
+        {
+            "type": "image_picker", 
+            "id": "ingredients_banner_image",
+            "label": "Image"
+        }        
+    ]
+}
+{% endschema %}

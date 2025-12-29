@@ -1,0 +1,15 @@
+<div class="vision-image">
+    <div class="vision-image__container">
+        <img 
+            src="{{ section.settings.vision_image | img_url: '500x' }}" 
+            alt="Vision Image"
+            width="605"
+            height="500"
+        >
+    </div>
+    <div class="vision-image__banner">
+        {% for i in (1..10) %}
+            <span>40-Love</span> {{ 'icon-lighting.svg' | inline_asset_content }}
+        {% endfor %}
+    </div>
+</div>

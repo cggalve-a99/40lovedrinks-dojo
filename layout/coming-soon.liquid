@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+    <head>
+        {% # Inlined CSS Variables %}
+        {% render 'css-variables' %}
+
+        {% # Load and preload the critical CSS %}
+        {{ 'global.css' | asset_url | stylesheet_tag: preload: true }}
+        {{ 'coming-soon.css' | asset_url | stylesheet_tag }}
+
+        {% # Social, title, etc. %}
+        {% render 'meta-tags' %}
+
+        {{ content_for_header }}
+    </head> 
+    <body>
+        {% section 'global-header-alt' %}
+        
+        {{ content_for_layout }}
+
+        {% section 'global-footer-alt' %}
+    </body>
+</html>

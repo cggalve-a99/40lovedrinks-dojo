@@ -1,0 +1,37 @@
+<section class="about__vision">
+    <div class="container">
+        <div class="flex align-stretch justify-center flex-wrap about__vision--inner-wrapper">
+            <div class="about__vision--text-content">
+                <h2 class="site-title__lg">{{ section.settings.vision_title }}</h2>
+                <div class="about__vision--description">
+                    {{ section.settings.vision_content }}
+                </div>
+            </div>
+            {% render 'components-vision' %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Our Vision",
+    "settings": [
+        {
+            "type": "text",
+            "id": "vision_title",
+            "label": "Title",
+            "default": "A Vision for Nutritious Indulgence"
+        },
+        {
+            "type": "richtext", 
+            "id": "vision_content", 
+            "label": "Content"
+        }, 
+        {
+            "type": "image_picker", 
+            "id": "vision_image",
+            "label": "Image"
+        }  
+    ]
+}
+{% endschema %}

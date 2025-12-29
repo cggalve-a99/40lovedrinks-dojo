@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "thank-you",
+  "sections": {
+    "banner": {
+      "type": "components-banner",
+      "settings": {
+        "collection_banner_title": "Thank you for your purchase!",
+        "collection_banner_desc": "<p>Your order has been received — pure hydration and collagen-powered glow will be with you soon.</p>"
+      }
+    },
+    "hero-banner": {
+      "type": "pages-thank-you-hero-banner",
+      "settings": {
+        "ty_hero_image": "shopify://shop_images/thank-you-hero-banner.webp"
+      }
+    },
+    "new-product": {
+      "type": "components-new-product-arrival",
+      "settings": {
+        "new_arrival": "",
+        "slider_collection": "thank-you-page",
+        "product_limit": 3,
+        "show_slider": false
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero-banner",
+    "new-product"
+  ]
+}

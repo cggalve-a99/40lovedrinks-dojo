@@ -1,0 +1,121 @@
+{% assign description = product.description %}
+{% assign delivery_details = product.metafields.custom.delivery_details %}
+{% assign product_benefits = product.metafields.custom.product_benefits %}
+{% assign ingredients = product.metafields.custom.ingredients.value %}
+{% assign how_to_take = product.metafields.custom.how_to_take %}
+{% assign storage_instructions = product.metafields.custom.storage_instructions %}
+{% assign important_reminders = product.metafields.custom.reminder %}
+{% assign precaution = product.metafields.custom.precaution %}
+
+<div class="product__description">
+    {% # Description # %}
+    {% if product.description != blank %}
+    <div class="product__description--data active">
+        <div class="product__description--content">
+            {{ description }}
+        </div>
+    </div>
+    {% endif %}
+
+    {% # Product Benefits # %}
+    {% if product_benefits != blank %}
+    <div class="product__description--data">
+        <div class="product__description--header">
+            <h3>Benefits</h3>
+        </div>
+        <div class="product__description--content">
+            {{ product_benefits | metafield_tag }}
+        </div>
+    </div>
+    {% endif %}
+    
+    {% # Delivery Details # %}
+    {% if delivery_details != blank %}
+    <div class="product__description--data">
+        <div class="product__description--header">
+            <h3>Delivery</h3>
+        </div>
+        <div class="product__description--content">
+            {{ delivery_details | metafield_tag }}
+        </div>
+    </div>
+    {% endif %}
+
+    {% # Ingredients # %}
+    {% if ingredients != blank %}
+    <div class="product__description--data">
+        <div class="product__description--header">
+            <h3>Ingredients</h3>
+        </div>
+        <div class="product__description--content">
+            <div class="ingredients-grid">
+                {% for ingredient in ingredients %}
+                    <div class="ingredients-grid--item">
+                        <span>{{ ingredient.name }}</span>
+                    </div>     
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% # Storage Instructions # %}
+    {% if storage_instructions != blank %}
+    <div class="product__description--data">
+        <div class="product__description--header">
+            <h3>Storage Instructions</h3>
+        </div>
+        <div class="product__description--content">
+            {{ storage_instructions | metafield_tag }}
+        </div>
+    </div>
+    {% endif %}
+
+    {% # Important Reminders # %}
+    {% if important_reminders != blank %}
+    <div class="product__description--data">
+        <div class="product__description--header">
+            <h3>Important Reminders</h3>
+        </div>
+        <div class="product__description--content">
+            {{ important_reminders | metafield_tag }}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if how_to_take != blank %}
+    <div class="product__description--data">
+        <div class="product__description--header">
+            <h3>How to Take</h3>
+        </div>
+        <div class="product__description--image-content">
+            <img
+                src="{{ how_to_take | img_url: '500x' }}"
+                alt="{{ product.title | escape }}"
+                loading="lazy"
+                width="556"
+                height="249"
+            >
+        </div>
+    </div>
+    {% endif  %}
+
+    {% # Precautions # %}
+    {% if precaution != blank %}
+    <div class="product__description--data">
+        <div class="product__description--header">
+            <h3>Precaution</h3>
+        </div>
+        <div class="product__description--content">
+            {{ precaution | metafield_tag }}
+        </div>
+    </div>
+    {% endif %}
+
+    {% # View More Button # %}
+    <div class="product__description--button">
+        <button type="button" class="btn white bordered-black" id="show-more-details" data-value="more">
+            View More
+        </button>
+    </div> 
+</div>

@@ -1,0 +1,44 @@
+<section class="about__story">
+    <div class="container">
+        <div class="flex align-center justify-between about__story--inner-wrapper">
+            <div class="about__story--text-content">
+                <h2 class="site-title__lg">{{ section.settings.story_title }}</h2>
+                <div class="about__story--description">
+                    {{ section.settings.story_content }}
+                </div>
+            </div>
+            <div class="about__story--image">
+                <img 
+                    src="{{ section.settings.story_image | img_url: '500x' }}" 
+                    alt="{{ section.settings.story_title }}"
+                    width="620"
+                    height="500"
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Our Story Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "story_title",
+            "label": "Title",
+            "default": "Our Story"
+        },
+        {
+            "type": "richtext", 
+            "id": "story_content", 
+            "label": "Content"
+        }, 
+        {
+            "type": "image_picker", 
+            "id": "story_image", 
+            "label": "Image"
+        }
+    ]
+}
+{% endschema %}

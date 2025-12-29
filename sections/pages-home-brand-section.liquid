@@ -1,0 +1,80 @@
+<section class="homepage__brands">
+    <div class="container">
+        <div class="text-center homepage__brands--header">
+            <div class="homepage__brands--image">
+                <img 
+                    src="{{ section.settings.brand_image | image_url }}" 
+                    alt="Trusted Brand Image"
+                    width="218";
+                    height="371";
+                >
+            </div>
+            <h2 class="site-title__lg">
+                {{ section.settings.brand_title }}
+            </h2>
+            <div class="homepage__brands--desc">
+                {{ section.settings.brand_desc }}
+            </div>
+        </div>  
+        <div class="homepage__brands--list-wrapper"> 
+            <div class="splide homepage__brands--carousel-wrapper" id="brands-slider"> {% # .splide # %}
+                <div class="splide__track"> {% # .splide__track # %}
+                    <div class="splide__list homepage__brands--carousel"> {% # .splide__list # %}
+                        {% for block in section.blocks %}
+                        <div class="splide__slide homepage__brands--item"> {% # .splide__slide # %}
+                            <img 
+                                src="{{ block.settings.brand_logo | image_url }}" 
+                                alt="Logo"
+                                width="134.88"
+                                height="107.89px"
+                            >
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Brands Section",
+    "settings": [
+        {
+            "type": "text", 
+            "id": "brand_title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "brand_desc", 
+            "label": "Description"
+        }, 
+        {
+            "type": "image_picker", 
+            "id": "brand_image",
+            "label": "Image"
+        }
+    ], 
+    "blocks": [
+        {
+            "type": "brand",
+            "name": "Brands", 
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "brand_logo", 
+                    "label": "Brand Logo"
+                }
+            ]
+        }
+    ], 
+    "presets": [
+        {
+            "name": "Brands Section",
+            "category": "Sections"
+        }
+    ]
+}
+{% endschema %}

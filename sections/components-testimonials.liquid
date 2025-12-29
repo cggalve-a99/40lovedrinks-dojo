@@ -1,0 +1,70 @@
+<section class="testimonials">
+    <div class="container">
+        <h2 class="text-center site-title__lg">{{ section.settings.section_title }}</h2>
+    </div>
+    <div class="testimonials__inner-wrapper">
+        <div class="testimonials__carousel-container">
+            <div id="testimonials" class="splide testimonials__carousel"> {% # .splide # %}
+                <div class="splide__track"> {% # .splide__track # %}
+                    <div class="splide__list testimonials__list"> {% # .splide__list # %}
+                        {% for testimonial in section.settings.testimonials %}
+                            <div class="splide__slide flex flex-col testimonials__list--item"> {% # .splide__slide # %}
+                                {% if testimonial.author_image %}
+                                    <div class="testimonials__list--image">
+                                        <img  
+                                            src="{{ testimonial.author_image | img_url: '500x' }}" 
+                                            alt="{{ testimonial.author }}"
+                                            width="100%"
+                                            height="280"
+                                        >
+                                    </div>
+                                {% endif %}
+                                <div class="testimonials__list--text-content">
+                                    <h4>
+                                        {{ testimonial.author }} {{ 'icon-check-green.svg' | inline_asset_content }}
+                                    </h4>
+                                    <div class="flex align-center justify-center testimonials__list--ratings">
+                                        {% for i in (1..5) %}
+                                            <span>
+                                                {{ 'icon-star.svg' | inline_asset_content }}
+                                            </span>
+                                        {% endfor %}
+                                    </div>
+                                    <p>{{ testimonial.quote | metafield_text }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials__carousel-nav">
+            <div class="btn transparent testimonials__slider--arrow" id="testimonials-prev" data-direction="-1">
+                {{ 'icon-caret-left.svg' | inline_asset_content }}
+            </div>
+            <div class="btn transparent testimonials__slider--arrow" id="testimonials-next" data-direction="+1">
+                {{ 'icon-caret-right.svg' | inline_asset_content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Testimonial Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "section_title",
+            "label": "Section Title",
+            "default": "What our customers say"
+        },
+        {
+            "type": "metaobject_list", 
+            "id": "testimonials", 
+            "label": "Testimonials", 
+            "metaobject_type": "testimonials"
+        }
+    ]
+}
+{% endschema %}

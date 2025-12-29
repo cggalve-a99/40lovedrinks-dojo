@@ -1,0 +1,41 @@
+{% render 'home-banner' %}
+
+{% # Schema Definition # %} 
+{% schema %}
+{
+    "name": "Banner",
+    "settings": [
+        {
+            "type": "text",
+            "id": "banner_title",
+            "label": "Banner Title"
+        }, 
+        {
+            "type": "richtext",
+            "id": "banner_description",
+            "label": "Banner Description"
+        }, 
+        {
+            "type": "image_picker",
+            "id": "banner_image", 
+            "label": "Banner Image"
+        },
+        {
+            "type": "checkbox",
+            "id": "banner_show_payments",
+            "label": "Show Payment Methods"
+        },
+        {
+            "type": "text", 
+            "id": "banner_review_writeup_1",
+            "label": "Review text #1"
+        },
+        {
+            "type": "text", 
+            "id": "banner_review_writeup_2",
+            "label": "Review text #2"
+        } 
+
+    ]
+}
+{% endschema %}

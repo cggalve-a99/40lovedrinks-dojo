@@ -1,0 +1,35 @@
+<section class="featured-testimonial">
+    <div class="featured-testimonial__inner-wrapper">
+        <div class="splide featured-testimonial__carousel-wrapper" id="featured-testimonial"> {% # .splide # %}
+            <div class="splide__track"> {% # .splide__track # %}
+                <div class="splide__list featured-testimonial__carousel--list"> {% # .splide__list # %}
+                    {% for testimonial in section.settings.featured_testimonials %}
+                        <div class="splide__slide position-relative featured-testimonial__carousel--item"> {% # .splide__slide # %}
+                            <div class="featured-testimonial__carousel--background" style="background-image: url({{ testimonial.author_image | image_url }})"></div>
+                            <div class="featured-testimonial__carousel--content">
+                                <h4>{{ testimonial.author }}</h4>
+                                <div class="featured-testimonial__carousel--desc">
+                                   {{ testimonial.quote | metafield_text }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Featured Testimonials",
+    "settings": [
+        {
+            "type": "metaobject_list", 
+            "id": "featured_testimonials", 
+            "label": "Featured Testimonial", 
+            "metaobject_type": "testimonials"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,49 @@
+<section class="collection__list">
+    <div class="container">
+        <div class="collection__list--inner-wrapper">
+            <div class="collection__list--header">
+                <div class="site-title__md text-center">
+                    {{ section.settings.list_header_title }}
+                </div>
+                <div class="collection__list--header-desc text-center">
+                    {{ section.settings.list_header_desc }}
+                </div>
+            </div>
+
+            <div class="product-card__list">
+                {% paginate collection.products by 6 %}
+                    {% for product in collection.products %}
+                        {% assign product_image_url = product.featured_image | img_url: '500x' %}
+                        {% assign button_label = 'Get ' | append: product.title %}
+
+                        {% render 'components-product-card', 
+                            product_image: product_image_url,
+                            product_title: product.title,
+                            product_price: product.price,
+                            product_link: product.url,
+                            product_button_label: button_label
+                        %}
+                    {% endfor %}
+                {% endpaginate %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "List Header",
+    "settings": [
+        {
+            "type": "richtext", 
+            "id": "list_header_title",
+            "label": "Title"
+        }, 
+        {
+            "type": "richtext",
+            "id": "list_header_desc", 
+            "label": "Description"
+        }
+    ]
+}
+{% endschema %}

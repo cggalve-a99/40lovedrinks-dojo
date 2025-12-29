@@ -1,0 +1,74 @@
+<section class="formula">
+    <div class="container">
+        <div class="formula__inner-wrapper">
+            <div class="formula__header">
+                <h2 class="site-title__lg">{{ section.settings.formula_title }}</h2>
+                <div class="formula__desc">
+                    {{ section.settings.formula_desc }}
+                </div>
+            </div>
+            <div class="flex flex-wrap align-stretch formula__list">
+                {% for block in section.blocks %}
+                    {%  assign icon = block.settings.key_icon %}
+                    <div class="flex flex-col formula__item">
+                        <div class="formula__item--image">
+                            {{ icon | inline_asset_content }}
+                        </div>
+                        <h4>{{ block.settings.key_title }}</h4>
+                        <div class="formula__item--desc">
+                            {{ block.settings.key_desc }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{%  schema  %}
+{
+    "name": "Formula Highlight", 
+    "settings": [
+        {
+            "type": "text",
+            "id": "formula_title",
+            "label": "Title"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "formula_desc", 
+            "label": "Description"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "key_ingredient", 
+            "name": "Key Ingredient", 
+            "settings": [
+                {
+                    "type": "text", 
+                    "id": "key_title", 
+                    "label": "Title"
+                }, 
+                {
+                    "type": "richtext",
+                    "id": "key_desc",
+                    "label": "Description"
+                },
+                {
+                    "type": "text", 
+                    "id": "key_icon",
+                    "label": "Icon"
+                }
+            ]
+        }
+    ], 
+    "max_blocks": 12, 
+    "presets": [
+        {
+            "name": "Formula Highlight",
+            "category": "Sections"
+        }
+    ]
+}
+{% endschema %}

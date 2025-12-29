@@ -1,0 +1,23 @@
+
+{% if related_products != blank %}
+    <section class="new-product__grid">
+        <div class="container">
+            <div class="new-product__grid--wrapper">        
+                <div class="product-card__list">
+                    {% for product in related_products %}
+                        {% assign product = all_products[product] %}
+
+                        {% assign product_image_url = product.featured_image | img_url: '500x' %}
+
+                        {% render 'components-product-card', 
+                            product_image: product_image_url,`
+                            product_title: product.title,
+                            product_price: product.price,
+                            product_link: product.url
+                        %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}  

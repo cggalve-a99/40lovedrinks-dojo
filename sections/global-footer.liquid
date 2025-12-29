@@ -1,0 +1,80 @@
+<footer>
+    <div class="container">
+        <div class="footer">
+            <div class="footer__top">
+                <div class="footer__top--left hidden-in-md hidden-in-sm">
+                    <div class="footer__top--logo">
+                        <a href="{{ routes.root_url }}">
+                            <img 
+                                src="{{ settings.footer_logo | image_url }}" 
+                                alt="{{ shop.name }}"
+                                width="197"
+                                height="160"
+                            >
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__top--right">
+                    <ul class="footer__top--menu">
+                    {% for link in settings.footer_menu.links %}
+                        <li class="nav-item">
+                            <a href="{{ link.url }}" class="nav-link">
+                                {{ link.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    <div class="newsletter">
+                        <div class="newsletter__header text-white">
+                            <h4 class="site-title__md">{{ settings.header_text }}</h4>
+                            <p>{{ settings.header_desc }}</p>
+                        </div>
+                        <div class="newsletter__body">
+                            {% form 'customer', id: 'newsletter-form', class: 'form' %} 
+                                <input type="hidden" name="contact[tags]" value="newsletter">
+
+                                <div class="form__group--inline">
+                                    <div class="form__control bordered-white">
+                                        <input type="email" name="contact[email]" placeholder="Email address" required>
+                                    </div>
+                                    <button type="submit" class="btn white">Subscribe</button>
+                                </div>
+                            
+                                {% if form.posted_successfully? %} 
+                                    <p class="newsletter-success">Thank you for subscribing!</p> 
+                                {% elsif form.errors %}
+                                    <p class="newsletter-error">{{ form.errors | default_errors }}</p> 
+                                {% endif %} 
+                            {% endform %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between align-center footer__bottom">
+                <div class="footer__bottom--copyright text-white">
+                    <p>&copy; {{ 'now' | date: '%Y' }} 40-love. All rights reserved.</p>
+                </div>
+                
+                {% render 'global-payment-methods' %} 
+
+                <div class="flex align-center footer__bottom--social hidden-in-md hidden-in-sm">
+                    <a href="{{ settings.facebook_url }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-facebook.svg' | inline_asset_content }}
+                    </a>
+                    <a href="{{ settings.instagram_url }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-ig.svg' | inline_asset_content }}
+                    </a>
+                    <a href="{{ settings.youtube_link }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-youtube.svg' | inline_asset_content }}
+                    </a>
+                    <a href="{{ settings.tiktok_link }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-tiktok.svg' | inline_asset_content }}
+                    </a>
+                    <a href="{{ settings.twitter_url }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-x.svg' | inline_asset_content }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

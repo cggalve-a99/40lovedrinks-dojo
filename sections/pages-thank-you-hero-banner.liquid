@@ -1,0 +1,30 @@
+<section class="thank-you__hero">
+    <div class="container thank-you__hero--inner-wrapper">
+        <div class="new-product__image">
+            <img 
+                src="{{ section.settings.ty_hero_image | img_url: '500x' }}" 
+                alt="Thank You Hero Image"
+                width="382"
+                height="316"
+            >
+            <div class="new-product__banner">
+                {% for i in (1..15) %}
+                    <span>Thank You</span> {{ 'icon-heart.svg' | inline_asset_content }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Thank You Hero",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "ty_hero_image", 
+            "label": "Image"
+        }
+    ]
+}
+{% endschema %}

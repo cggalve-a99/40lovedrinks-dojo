@@ -1,0 +1,23 @@
+<footer>
+    <div class="container">
+        <div class="footer-alt">
+            <div class="flex align-center footer-alt__socials">
+                <a href="{{ settings.instagram_url }}" target="_blank" rel="noopener noreferrer">
+                    {{ 'icon-ig.svg' | inline_asset_content }}
+                </a>
+                <a href="{{ settings.facebook_url }}" target="_blank" rel="noopener noreferrer">
+                    {{ 'icon-facebook-alt.svg' | inline_asset_content }}
+                </a>
+                <a href="{{ settings.youtube_link }}" target="_blank" rel="noopener noreferrer">
+                    {{ 'icon-youtube-alt.svg' | inline_asset_content }}
+                </a>
+                <a href="{{ settings.twitter_url }}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ 'icon-line.svg' | asset_url }}" alt="Line Logo" width="12" height="12">
+                </a>
+            </div>
+            <div class="footer-alt__copyright">
+                <p>Copyright {{ 'now' | date: '%Y' }} 40-LOVE. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>

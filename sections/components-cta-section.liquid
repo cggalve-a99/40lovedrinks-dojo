@@ -1,0 +1,67 @@
+<section class="cta-section">
+    <div class="container cta-section__inner-wrapper">
+        <div class="flex align-stretch justify-center flex-wrap cta-section__card-list">
+            {% for block in section.blocks %}
+                {% render 'components-cta-card',
+                    cta_title: block.settings.card_title,
+                    cta_description: block.settings.card_description,
+                    cta_image: block.settings.card_image,
+                    cta_video: block.settings.card_video_url,
+                    cta_button_label: block.settings.card_button_label,
+                    cta_button_link: block.settings.card_button_link
+                %}
+            {% endfor %}
+        </div>
+    </div>
+</section>   
+
+{% schema %}
+{
+    "name": "CTA Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "cta_section_title",
+            "label": "Title"
+        } 
+    ],
+    "blocks": [
+        {
+            "type": "cta_card",
+            "name": "CTA Card",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "card_title",
+                    "label": "CTA Card Title"
+                }, 
+                {
+                    "type": "richtext", 
+                    "id": "card_description",
+                    "label": "CTA Card Description"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "card_image",
+                    "label": "CTA Card Image"
+                },
+                {
+                    "type": "url",
+                    "id": "card_video_url",
+                    "label": "CTA Card Video"
+                },
+                {
+                    "type": "text",
+                    "id": "card_button_label",
+                    "label": "CTA Card Button Label"
+                },
+                {
+                    "type": "url",
+                    "id": "card_button_link",
+                    "label": "CTA Card Button Link"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "about",
+  "sections": {
+    "banner": {
+      "type": "components-banner",
+      "settings": {
+        "collection_banner_title": "We're More Than a Business",
+        "collection_banner_desc": "<p>We're a family on a journey to better health.</p>"
+      }
+    },
+    "our-story": {
+      "type": "pages-about-us-our-story",
+      "settings": {
+        "story_title": "Our Story",
+        "story_content": "<p>40-Loves was established in Osaka, Japan. Driven by commitment to promoting self-care and addressing challenges like dehydration and electrolyte imbalance, we set out to fill the gap in the market for Asian-inspired flavors. Our mission is to create drink mixes that boldly challenge the misconception that health-conscious choices can't also be irresistibly delicious.</p>",
+        "story_image": "shopify://shop_images/our-story-image.webp"
+      }
+    },
+    "our-vision": {
+      "type": "pages-about-us-vision",
+      "settings": {
+        "vision_title": "Our Story",
+        "vision_content": "<p>With unwavering determination, 40-Loves started out by formulating three unique flavors that married delicious Asian inspirations with wellness — each one a sugar-free adventure enriched with electrolytes and vitamins. Today, our products still stands as a harmonious blend of rich Asian-inspired flavors and scientific research. Cheers to a world that embraces both health and deliciousness!</p>",
+        "vision_image": "shopify://shop_images/vision-section-image.webp"
+      }
+    },
+    "our-difference": {
+      "type": "pages-about-us-our-difference",
+      "settings": {
+        "diff_title": "What Makes 40-Love Different?",
+        "diff_desc": "<p>Not all sodium is the same. Sodium chloride, commonly known as table salt, is a fast-acting form that helps restore the sodium lost through sweat and supports hydration, muscle function, and nerve signaling. <br/><br/></p><p>Sodium citrate is a more advanced form, combining sodium with citric acid for smoother digestion and added benefits like buffering acid buildup in the body. It’s especially helpful during endurance efforts, as it can reduce the risk of cramping and fatigue. 40-Love, uses a smart blend of both to deliver hydration that works hard and feels good.</p>",
+        "diff_image": "shopify://shop_images/our-difference.webp"
+      }
+    },
+    "formula-highlight": {
+      "type": "components-formula-highlight",
+      "settings": {
+        "formula_title": "The Ultimate Formula To Get Hydrated",
+        "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
+      },
+      "blocks": {
+        "key_ingredient_1": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Hydrolyzed Marine Collagen",
+            "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
+            "key_icon": "vector-marine-collagen.svg"
+          }
+        },
+        "key_ingredient_2": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Stevia",
+            "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
+            "key_icon": "vector-stevia.svg"
+          }
+        },
+        "key_ingredient_3": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Zinc",
+            "key_desc": "<p>Improves focus, reduces stress, and enhances mental performance.</p>",
+            "key_icon": "vector-zinc.svg"
+          }
+        },
+        "key_ingredient_4": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Magnesium",
+            "key_desc": "<p>Relieves soreness, boosts energy production at a cellular level and aids muscle recovery.</p>",
+            "key_icon": "vector-magnesium.svg"
+          }
+        },
+        "key_ingredient_5": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Sodium",
+            "key_desc": "<p>Essential for hydration, reducing cramps, and boosting peak cellular performance.</p>",
+            "key_icon": "vector-sodium.svg"
+          }
+        },
+        "key_ingredient_6": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Potassium",
+            "key_desc": "<p>Accelerates recovery, regulates nerve signals, and fights muscle fatigue.</p>",
+            "key_icon": "vector-potassium.svg"
+          }
+        }
+      },
+      "block_order": [
+        "key_ingredient_1",
+        "key_ingredient_2",
+        "key_ingredient_3",
+        "key_ingredient_4",
+        "key_ingredient_5",
+        "key_ingredient_6"
+      ]
+    },
+    "contact-us": {
+      "type": "components-contact-us-form",
+      "settings": {
+        "contact_title": "Have a Question? We're Here to Help!",
+        "contact_desc": "<p>Please fill out the contact form below, or reach out directly at <a href='mailto: info@40loves.com'>info@40loves.com</a>. We aim to respond within 24 hours or sooner.</p>",
+        "contact_button_label": "Submit"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "our-story",
+    "our-vision",
+    "our-difference",
+    "formula-highlight",
+    "contact-us"
+  ]
+}

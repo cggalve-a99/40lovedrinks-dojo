@@ -1,0 +1,73 @@
+<section class="homepage__faq">
+    <div class="container">
+        <div class="homepage__faq--inner-wrapper">
+            <div class="text-center homepage__faq--header">
+                <h2 class="site-title__lg">{{ section.settings.faq_title }}</h2>
+                <div class="homepage__faq--desc">
+                    {{ section.settings.faq_desc }}
+                </div>
+            </div>
+            <div class="site-faq">
+                <div class="site-faq__list">
+                    {% for block in section.blocks %}
+                        <div class="flex align-center justify-between site-faq__title">
+                            <h4>{{ block.settings.question }}</h4>
+                            <div class="site-faq__icon" data-id="plus">
+                                {{ 'icon-plus.svg' | inline_asset_content }}
+                            </div>
+
+                            <div class="site-faq__icon" data-id="minus">
+                                {{ 'icon-minus.svg' | inline_asset_content }}
+                            </div>
+                        </div>
+                        <div class="site-faq__content">
+                            {{ block.settings.answer }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "FAQ Section", 
+    "settings": [
+        {
+            "type": "text", 
+            "id": "faq_title",
+            "label": "Title"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "faq_desc",
+            "label": "Description"
+        }
+    ], 
+    "blocks": [
+        {
+            "type": "faq_question",
+            "name": "FAQ Question",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "question",
+                    "label": "Question"
+                },
+                {
+                    "type": "richtext",
+                    "id": "answer",
+                    "label": "Answer"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "FAQ Section",
+            "category": "Sections"
+        }
+    ]
+}
+{% endschema %}

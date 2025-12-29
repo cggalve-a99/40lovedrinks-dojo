@@ -1,0 +1,122 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+    "layout": "product",
+    "sections": {
+        "product-details": {
+            "type": "pages-product-section-details",
+            "settings": {}
+        },
+        "faq-section": {
+            "type": "pages-home-faq-section",
+            "settings": {
+                "faq_title": "FAQ",
+                "faq_desc": "<p>If you don't see your question answered here, please don't hesitate to contact us or visit the extended FAQ section here.</p>"
+            },
+            "blocks": {
+                "faq_question_1": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "What is 40-Loves Drinks?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                },
+                "faq_question_2": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "Can i drink 40-Loves Drinks even if i don't exercise?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                },
+                "faq_question_3": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "When should i drink 40-Loves Drinks?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                },
+                "faq_question_4": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "My doctor told me to cut down on salt, can I drink 40-Loves Drinks?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                },
+                "faq_question_5": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "How often can i drink 40-Loves Drinks?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                }
+            },
+            "block_order": [
+                "faq_question_1",
+                "faq_question_2",
+                "faq_question_3",
+                "faq_question_4",
+                "faq_question_5"
+            ]
+        },
+        "related-products": {
+            "type": "pages-product-section-related",
+            "settings": {}
+        },
+        
+        "ingredients": {
+            "type": "components-nutritional-value", 
+            "settings": {
+                "ingredients_banner_image": "shopify://shop_images/trusted-brand-images.webp",
+            },
+            "blocks": {
+                "ingredient_1": {
+                    "type": "ingredient",
+                    "settings": {
+                        "name": "Sodium", 
+                        "volume": "1000 mg"
+                    }
+                },
+                "ingredient_2": {
+                    "type": "ingredient",
+                    "settings": {
+                        "name": "Potassium", 
+                        "volume": "600 mg"
+                    }
+                },
+                "ingredient_3": {
+                    "type": "ingredient",
+                    "settings": {
+                        "name": "Magnesium", 
+                        "volume": "100 mg"
+                    }
+                },
+                "ingredient_4": {
+                    "type": "ingredient",
+                    "settings": {
+                        "name": "Marine Collagen", 
+                        "volume": "40 mg"
+                    }
+                },
+            }, 
+            "block_order": [
+                "ingredient_1",
+                "ingredient_2",
+                "ingredient_3",
+                "ingredient_4",
+            ]
+        }, 
+    },
+    "order": [
+        "product-details",
+        "faq-section",
+        "related-products",
+        "ingredients"
+    ]
+}
