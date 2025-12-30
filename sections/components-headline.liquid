@@ -1,0 +1,27 @@
+{% if section.settings.title != blank %}
+<section class="headline">
+    <div class="container">
+        <h1 class="headline__title site-title__xl">{{ section.settings.title }}</h1>
+    </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Headline",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Headline",
+            "category": "Sections"
+        }
+    ]
+}
+{% endschema %}
+

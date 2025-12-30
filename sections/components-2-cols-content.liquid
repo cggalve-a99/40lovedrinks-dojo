@@ -1,0 +1,73 @@
+<section class="two-cols-content{% if section.settings.show_border %} two-cols-content--with-border{% endif %}"{% if section.settings.background_color != blank %} style="background-color: {{ section.settings.background_color }};"{% endif %}>
+    <div class="container">
+        <div class="two-cols-content__inner-wrapper{% if section.settings.column_reverse %} two-cols-content__inner-wrapper--reverse{% endif %}">
+            <div class="two-cols-content__column two-cols-content__column--text">
+                {% if section.settings.title != blank %}
+                <h2 class="two-cols-content__title">{{ section.settings.title }}</h2>
+                {% endif %}
+                {% if section.settings.description != blank %}
+                <div class="two-cols-content__description">
+                    {{ section.settings.description }}
+                </div>
+                {% endif %}
+            </div>
+            <div class="two-cols-content__column two-cols-content__column--image">
+                {% if section.settings.image != blank %}
+                <img 
+                    src="{{ section.settings.image | image_url: width: 800 }}" 
+                    alt="{{ section.settings.image.alt | default: section.settings.title }}" 
+                    width="{{ section.settings.image.width | default: 800 }}" 
+                    height="{{ section.settings.image.height | default: 600 }}" 
+                    loading="lazy"
+                >
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "2 Cols Content",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "checkbox",
+            "id": "column_reverse",
+            "label": "Reverse Column Order",
+            "default": false
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_border",
+            "label": "Show Border Top",
+            "default": false
+        }
+    ],
+    "presets": [
+        {
+            "name": "2 Cols Content",
+            "category": "Sections"
+        }
+    ]
+}
+{% endschema %}
