@@ -82,7 +82,8 @@
         "description": "<p>40-LOVE is for people who care about how they move, how they recover, and how they show up — today and for the long run.</p><p>Hydration with intention.</p><p>Fuel for mind, body, and soul.</p>",
         "image": "shopify://shop_images/our-story-image.webp",
         "column_reverse": true,
-        "background_color": "#f9f8f6"
+        "background_color": "#f9f8f6",
+        "show_border": true
       }
     },
     "our-difference": {

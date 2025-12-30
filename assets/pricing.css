@@ -40,6 +40,12 @@
   width: 100%;
   padding: 24px;
 }
+.about__difference--text-content p{
+  margin-bottom: 0.75rem;
+}
+.about__difference--text-content p:last-child {
+  margin-bottom: 0;
+}
 .about__difference--text-content .site-title__lg {
   text-transform: uppercase;
   margin-bottom: 24px;

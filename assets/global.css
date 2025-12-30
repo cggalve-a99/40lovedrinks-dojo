@@ -1675,11 +1675,17 @@ footer {
     padding-block: 12px;
     background-color: transparent !important;
   }
+
+  .two-cols-content.two-cols-content--with-border {
+    border: none;
+  }
+
   .two-cols-content .two-cols-content__inner-wrapper {
     flex-direction: column;
     border-radius: 24px;
     overflow: hidden;
     outline: 1px solid var(--color-primary);
+    flex-direction: column-reverse;
   }
 
   .two-cols-content .two-cols-content__inner-wrapper.two-cols-content__inner-wrapper--reverse {
@@ -1708,7 +1714,7 @@ footer {
 /**************************************************
  * Headline
  **************************************************/
- .headline {
+.headline {
   text-align: center;
   padding-block: 24px;
- }
+}

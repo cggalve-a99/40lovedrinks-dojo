@@ -13,8 +13,8 @@
     "banner": {
         "type": "components-banner",
         "settings": {
-            "collection_banner_title": "Your Subscription to Everyday Wellness",
-            "collection_banner_desc": "<p>Still can’t make up your mind? No worries! Check out some of our most popular flavors and packs.</p>"
+            "collection_banner_title": "Hydration for the Long Game",
+            "collection_banner_desc": "<p>Thoughtful hydration, delivered regularly — so you can focus on movement, recovery, and showing up well.</p>"
         }
     },
     "new-product": {
@@ -30,79 +30,8 @@
         "type": "pages-about-us-our-difference",
         "settings": {
             "diff_title": "What Makes 40-Love Different?",
-            "diff_desc": "<p>Not all sodium is the same. Sodium chloride, commonly known as table salt, is a fast-acting form that helps restore the sodium lost through sweat and supports hydration, muscle function, and nerve signaling. <br/><br/></p><p>Sodium citrate is a more advanced form, combining sodium with citric acid for smoother digestion and added benefits like buffering acid buildup in the body. It’s especially helpful during endurance efforts, as it can reduce the risk of cramping and fatigue. 40-Love, uses a smart blend of both to deliver hydration that works hard and feels good.</p>",
+            "diff_desc": "<p>Most electrolyte drinks are built for extremes.</p><p>High sodium. Harsh taste. One-off use.</p><p><strong>40-LOVE is built for consistency.</strong></p><p>We use a balanced blend of electrolytes — enough to replenish what you lose through heat and movement, without overpowering the drink or the body.</p><p>The result:</p><ul><li>Hydration that works during activity</li><li>Flavor that stays enjoyable</li><li>A formula you actually want to return to, day after day</li></ul><p>It's not about pushing harder.</p><p>It's about staying steady — and staying in the game.</p>",
             "diff_image": "shopify://shop_images/our-difference.webp"
-        }
-    },
-    "formula-highlight": {
-        "type": "components-formula-highlight",
-        "settings": {
-            "formula_title": "The Ultimate Formula To Get Hydrated",
-            "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
-        },
-        "blocks": {
-        "key_ingredient_1": {
-            "type": "key_ingredient",
-            "settings": {
-                "key_title": "Hydrolyzed Marine Collagen",
-                "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
-                "key_icon": "vector-marine-collagen.svg"
-            }
-        },
-        "key_ingredient_2": {
-            "type": "key_ingredient",
-            "settings": {
-                "key_title": "Stevia",
-                "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
-                "key_icon": "vector-stevia.svg"
-            }
-        },
-        "key_ingredient_3": {
-            "type": "key_ingredient",
-            "settings": {
-                "key_title": "Zinc",
-                "key_desc": "<p>Improves focus, reduces stress, and enhances mental performance.</p>",
-                "key_icon": "vector-zinc.svg"
-            }
-        },
-        "key_ingredient_4": {
-            "type": "key_ingredient",
-            "settings": {
-                "key_title": "Magnesium",
-                "key_desc": "<p>Relieves soreness, boosts energy production at a cellular level and aids muscle recovery.</p>",
-                "key_icon": "vector-magnesium.svg"
-            }
-        },
-        "key_ingredient_5": {
-            "type": "key_ingredient",
-            "settings": {
-                "key_title": "Sodium",
-                "key_desc": "<p>Essential for hydration, reducing cramps, and boosting peak cellular performance.</p>",
-                "key_icon": "vector-sodium.svg"
-            }
-        },
-        "key_ingredient_6": {
-            "type": "key_ingredient",
-            "settings": {
-                "key_title": "Potassium",
-                "key_desc": "<p>Accelerates recovery, regulates nerve signals, and fights muscle fatigue.</p>",
-                "key_icon": "vector-potassium.svg"
-            }
-        }
-        },
-        "block_order": [
-            "key_ingredient_1",
-            "key_ingredient_2",
-            "key_ingredient_3",
-            "key_ingredient_4",
-            "key_ingredient_5",
-            "key_ingredient_6"
-        ]
-    },
-    "pricing-banner": {
-        "type": "pages-pricing-banner",
-        "settings": {
-            "vision_image": "shopify://shop_images/vision-section-image.webp"
         }
     },
     "contact-us": {
@@ -118,8 +47,6 @@
         "banner",
         "new-product",
         "our-difference",
-        "formula-highlight",
-        "pricing-banner",
         "contact-us"
     ]
 }
