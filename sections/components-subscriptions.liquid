@@ -1,0 +1,101 @@
+<section class="subscriptions">
+  <div class="container">
+    <div class="subscriptions__inner-wrapper">
+      <div class="subscriptions__list">
+        {% for block in section.blocks %}
+          <div class="subscriptions__item" {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}
+              <div class="subscriptions__item--image">
+                <img
+                  src="{{ block.settings.image | image_url: width: 600 }}"
+                  alt="{{ block.settings.image.alt | default: block.settings.title }}"
+                  width="{{ block.settings.image.width | default: 600 }}"
+                  height="{{ block.settings.image.height | default: 400 }}"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+            <div class="subscriptions__item--content">
+              {% if block.settings.title != blank %}
+                <h3 class="subscriptions__item--title site-title__md">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.excerpt != blank %}
+                <div class="subscriptions__item--excerpt">{{ block.settings.excerpt }}</div>
+              {% endif %}
+              {% if block.settings.short_info != blank %}
+                <div class="subscriptions__item--short-info">{{ block.settings.short_info }}</div>
+              {% endif %}
+              {% if block.settings.subscribe_info != blank %}
+                <div class="subscriptions__item--subscribe-info">{{ block.settings.subscribe_info }}</div>
+              {% endif %}
+            </div>
+            {% if block.settings.link_label != blank %}
+              <div class="subscriptions__item--actions">
+                <a href="{{ block.settings.url }}" class="subscriptions__item--link btn">
+                  {{- block.settings.link_label | default: 'Subscribe' -}}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Subscriptions",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "subscription",
+      "name": "Subscription",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "excerpt",
+          "label": "Excerpt"
+        },
+        {
+          "type": "text",
+          "id": "short_info",
+          "label": "Short Info"
+        },
+        {
+          "type": "richtext",
+          "id": "subscribe_info",
+          "label": "Subscribe Info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link Label",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subscriptions",
+      "category": "Sections"
+    }
+  ]
+}
+{% endschema %}

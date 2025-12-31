@@ -17,15 +17,6 @@
             "collection_banner_desc": "<p>Thoughtful hydration, delivered regularly — so you can focus on movement, recovery, and showing up well.</p>"
         }
     },
-    "new-product": {
-        "type": "components-new-product-arrival",
-        "settings": {
-            "new_arrival": "",
-            "slider_collection": "subscription",
-            "product_limit": 5,
-            "show_slider": false
-        }
-    },
     "our-difference": {
         "type": "pages-about-us-our-difference",
         "settings": {
@@ -45,7 +36,6 @@
     },
     "order": [
         "banner",
-        "new-product",
         "our-difference",
         "contact-us"
     ]
