@@ -1768,6 +1768,9 @@ footer {
 }
 
 @media only screen and (max-width: 991.98px) {
+  .subscriptions {
+    padding-block-end: 12px;
+  }
   .subscriptions .subscriptions__list {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -28,7 +28,7 @@
 }
 
 .about__difference {
-  padding: 0 0 12px;
+  padding-block: 12px;
 }
 .about__difference--inner-wrapper {
   border: 1px solid var(--color-primary);

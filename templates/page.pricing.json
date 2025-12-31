@@ -7,36 +7,113 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
     "layout": "pricing",
     "sections": {
-    "banner": {
+      "banner": {
         "type": "components-banner",
         "settings": {
-            "collection_banner_title": "Hydration for the Long Game",
-            "collection_banner_desc": "<p>Thoughtful hydration, delivered regularly — so you can focus on movement, recovery, and showing up well.</p>"
+          "collection_banner_title": "Hydration for the Long Game",
+          "collection_banner_desc": "<p>Thoughtful hydration, delivered regularly — so you can focus on movement, recovery, and showing up well.</p>",
+          "collection_banner_footer": ""
         }
-    },
-    "our-difference": {
+      },
+      "components_subscriptions_UE8cyL": {
+        "type": "components-subscriptions",
+        "blocks": {
+          "subscription_A746WR": {
+            "type": "subscription",
+            "settings": {
+              "title": "Zesty Coconut — Mobile PDP",
+              "excerpt": "Electrolytes + Collagen for Everyday Hydration",
+              "short_info": "Tropical, clean, and grounding.",
+              "subscribe_info": "<p><strong>Subscribe & Save</strong></p><ul><li>2 pouches per month — daily hydration</li><li>₱1,690 monthly — save 15%</li><li>About ₱56 per day</li><li>Delivered monthly</li><li>Pause, skip, or cancel anytime</li></ul>",
+              "image": "shopify://shop_images/3.png",
+              "link_label": "Coming Soon",
+              "url": ""
+            }
+          },
+          "subscription_tHDPmn": {
+            "type": "subscription",
+            "settings": {
+              "title": "Zesty Lychee",
+              "excerpt": "Electrolytes + Collagen for Light, Everyday Hydration",
+              "short_info": "Light, floral, and juicy.",
+              "subscribe_info": "<p><strong>Subscribe & Save</strong></p><ul><li>2 pouches per month — daily hydration</li><li>₱1,690 monthly — save 15%</li><li>About ₱56 per day</li><li>Delivered monthly</li><li>Pause, skip, or cancel anytime</li></ul>",
+              "image": "shopify://shop_images/2.png",
+              "link_label": "Coming Soon",
+              "url": ""
+            }
+          },
+          "subscription_BnXY3f": {
+            "type": "subscription",
+            "settings": {
+              "title": "Zesty Cucumber Lemon — Mobile PDP",
+              "excerpt": "Electrolytes + Collagen for Clean, Everyday Hydration",
+              "short_info": "Crisp, clean, and zesty.",
+              "subscribe_info": "<p><strong>Subscribe & Save</strong></p><ul><li>2 pouches per month — daily hydration</li><li>₱1,690 monthly — save 15%</li><li>About ₱56 per day</li><li>Delivered monthly</li><li>Pause, skip, or cancel anytime</li></ul>",
+              "image": "shopify://shop_images/1.png",
+              "link_label": "Coming Soon",
+              "url": ""
+            }
+          },
+          "subscription_JBYGB6": {
+            "type": "subscription",
+            "settings": {
+              "title": "Winty",
+              "excerpt": "Collagen + Probiotics for Daily Nourishment",
+              "short_info": "Smooth, familiar, and comforting.",
+              "subscribe_info": "<p><strong>Subscribe & Save</strong></p><ul><li>2 pouches per month — daily nourishment</li><li>₱1,690 monthly — save 15%</li><li>About ₱56 per day</li><li>Delivered monthly</li><li>Pause, skip, or cancel anytime</li></ul>",
+              "image": "shopify://shop_images/winty-wintermelon-alt.webp",
+              "link_label": "Coming Soon",
+              "url": ""
+            }
+          },
+          "subscription_ncWJ6k": {
+            "type": "subscription",
+            "settings": {
+              "title": "Mixie",
+              "excerpt": "Collagen + Antioxidants for Daily Restoration",
+              "short_info": "Fresh, fruity, and smooth.",
+              "subscribe_info": "<p><strong>Subscribe & Save</strong></p><ul><li>2 pouches per month — a full 30-day supply</li><li>₱1,690 monthly — save 15%</li><li>About ₱56 per day</li><li>Delivered monthly, automatically</li><li>Pause, skip, or cancel anytime</li></ul>",
+              "image": "shopify://shop_images/mixie-alt.webp",
+              "link_label": "Coming Soon",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "subscription_A746WR",
+          "subscription_tHDPmn",
+          "subscription_BnXY3f",
+          "subscription_JBYGB6",
+          "subscription_ncWJ6k"
+        ],
+        "name": "Subscriptions",
+        "settings": {}
+      },
+      "our-difference": {
         "type": "pages-about-us-our-difference",
         "settings": {
-            "diff_title": "What Makes 40-Love Different?",
-            "diff_desc": "<p>Most electrolyte drinks are built for extremes.</p><p>High sodium. Harsh taste. One-off use.</p><p><strong>40-LOVE is built for consistency.</strong></p><p>We use a balanced blend of electrolytes — enough to replenish what you lose through heat and movement, without overpowering the drink or the body.</p><p>The result:</p><ul><li>Hydration that works during activity</li><li>Flavor that stays enjoyable</li><li>A formula you actually want to return to, day after day</li></ul><p>It's not about pushing harder.</p><p>It's about staying steady — and staying in the game.</p>",
-            "diff_image": "shopify://shop_images/our-difference.webp"
+          "diff_title": "What Makes 40-Love Different?",
+          "diff_desc": "<p>Most electrolyte drinks are built for extremes.</p><p>High sodium. Harsh taste. One-off use.</p><p><strong>40-LOVE is built for consistency.</strong></p><p>We use a balanced blend of electrolytes — enough to replenish what you lose through heat and movement, without overpowering the drink or the body.</p><p>The result:</p><ul><li>Hydration that works during activity</li><li>Flavor that stays enjoyable</li><li>A formula you actually want to return to, day after day</li></ul><p>It's not about pushing harder.</p><p>It's about staying steady — and staying in the game.</p>",
+          "diff_image": "shopify://shop_images/our-difference.webp"
         }
-    },
-    "contact-us": {
+      },
+      "contact-us": {
         "type": "components-contact-us-form",
         "settings": {
-            "contact_title": "Have a Question? We're Here to Help!",
-            "contact_desc": "<p>Please fill out the contact form below, or reach out directly at <a href='mailto: info@40loves.com'>info@40loves.com</a>. We aim to respond within 24 hours or sooner.</p>",
-            "contact_button_label": "Submit"
+          "contact_title": "Have a Question? We're Here to Help!",
+          "contact_desc": "<p>Please fill out the contact form below, or reach out directly at <a href='mailto: info@40loves.com'>info@40loves.com</a>. We aim to respond within 24 hours or sooner.</p>",
+          "contact_button_label": "Submit"
         }
-    }
+      }
     },
     "order": [
-        "banner",
-        "our-difference",
-        "contact-us"
+      "banner",
+      "components_subscriptions_UE8cyL",
+      "our-difference",
+      "contact-us"
     ]
-}
+  }
+  
