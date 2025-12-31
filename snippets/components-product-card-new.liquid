@@ -1,0 +1,31 @@
+{% assign button_label = product_title | split: ' ' %}
+{% assign background = product_title | handleize %}
+
+<article class="product-card-new__item">
+    <div class="product-card-new__item--image" style="background-color: var(--{{ background }})">
+        <img 
+            src="{{ product_image | image_url: width: 420 }}" 
+            alt="{{ product_image.alt | default: product_title }}"
+            width="{{ product_image.width | default: 420 }}" 
+            height="{{ product_image.height | default: 300 }}" 
+            loading="lazy"
+        >
+    </div>
+    <div class="product-card-new__item--content">
+        <div class="product-card-new__item--content-inner">
+            <div class="product-card-new__item--header">
+                <h3 class="product-card-new__item--title site-title__md">{{ product_title }}</h3>
+                <span class="product-card-new__item--price site-title__lg">{{ product_price | money }}</span>
+            </div>
+            {% if product_excerpt != blank %}
+                <div class="product-card-new__item--excerpt">{{ product_excerpt }}</div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="product-card-new__item--footer">
+        <a href="{{ product_url }}" class="btn product-card-new__item--button">
+            Get {{ button_label[0] }}
+        </a>
+    </div>
+</article>
+

@@ -1,0 +1,41 @@
+<section class="collections-list">
+    <div class="container">
+        <div class="collections-list__inner-wrapper">
+            <div class="collections-list__grid">
+                {% for collection in collections %}
+                    {% unless collection.handle == 'all' %}
+                    <div class="collections-list__item">
+                        <a href="{{ collection.url }}" class="collections-list__link">
+                            {% if collection.featured_image != blank %}
+                            <div class="collections-list__item--image">
+                                <img 
+                                    src="{{ collection.featured_image | image_url: width: 600 }}" 
+                                    alt="{{ collection.title }}" 
+                                    width="{{ collection.featured_image.width | default: 600 }}" 
+                                    height="{{ collection.featured_image.height | default: 400 }}" 
+                                    loading="lazy"
+                                >
+                            </div>
+                            {% endif %}
+                            <div class="collections-list__item--content">
+                                <h3 class="collections-list__item--title site-title__md">{{ collection.title }}</h3>
+                                {% if collection.description != blank %}
+                                <div class="collections-list__item--description">{{ collection.description }}</div>
+                                {% endif %}
+                            </div>
+                        </a>
+                    </div>
+                    {% endunless %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "List Collections",
+    "settings": []
+}
+{% endschema %}
+

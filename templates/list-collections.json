@@ -1,0 +1,12 @@
+{
+    "sections": {
+        "collections-grid": {
+            "type": "pages-list-collections",
+            "settings": {}
+        }
+    },
+    "order": [
+        "collections-grid"
+    ]
+}
+

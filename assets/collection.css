@@ -1,45 +1,10 @@
 /** Breakpoints **/
 :root {
-  --zesty-coconut: #E5FFF2;
-  --zesty-coconut-50: #00B75B;
-  --zesty-coconut-80: #42643E;
-  --zesty-lychee: #FFE8EF;
-  --winty: #FBDEC0;
-  --zesty-cucumber-lemon: #FCFBD2;
-  --mixie: #FFB5CC;
-}
-
-.subscription-highlight {
-  margin-bottom: 40px;
-}
-
-.collection__list {
-  padding: 12px 0;
-}
-.collection__list--header {
-  margin-bottom: 24px;
-}
-.collection__list--header-desc {
-  margin-top: 16px;
-}
-.collection__list--inner-wrapper {
-  padding: 40px 24px;
-  border: 1px solid var(--color-primary);
-  border-radius: 24px;
-}
-@media screen and (min-width: 992px) {
-  .subscription-highlight {
-    margin-bottom: 64px;
-  }
-  .collection__list {
-    padding: 56px 0;
-  }
-  .collection__list--header {
-    margin-bottom: 40px;
-  }
-  .collection__list--inner-wrapper {
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-  }
+  --zesty-coconut: #e5fff2;
+  --zesty-coconut-50: #00b75b;
+  --zesty-coconut-80: #42643e;
+  --zesty-lychee: #ffe8ef;
+  --winty: #fbdec0;
+  --zesty-cucumber-lemon: #fcfbd2;
+  --mixie: #ffb5cc;
 }

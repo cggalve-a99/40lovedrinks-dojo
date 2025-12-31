@@ -2,26 +2,25 @@
     <div class="container">
         <div class="collection__list--inner-wrapper">
             <div class="collection__list--header">
-                <div class="site-title__md text-center">
-                    {{ section.settings.list_header_title }}
+                <div class="collection__list--header-title site-title__lg">
+                    {{ collection.title }}
                 </div>
-                <div class="collection__list--header-desc text-center">
-                    {{ section.settings.list_header_desc }}
+                {% if collection.description != blank %}
+                <div class="collection__list--header-desc">
+                    {{ collection.description }}
                 </div>
+                {% endif %}
             </div>
-
-            <div class="product-card__list">
+            <div class="product-card-new__list">
                 {% paginate collection.products by 6 %}
                     {% for product in collection.products %}
-                        {% assign product_image_url = product.featured_image | img_url: '500x' %}
-                        {% assign button_label = 'Get ' | append: product.title %}
-
-                        {% render 'components-product-card', 
-                            product_image: product_image_url,
+                        {% assign product_excerpt = product.metafields.custom.excerpt | metafield_tag | strip_html %}
+                        {% render 'components-product-card-new', 
+                            product_image: product.featured_image,
                             product_title: product.title,
+                            product_excerpt: product_excerpt,
                             product_price: product.price,
-                            product_link: product.url,
-                            product_button_label: button_label
+                            product_url: product.url
                         %}
                     {% endfor %}
                 {% endpaginate %}
