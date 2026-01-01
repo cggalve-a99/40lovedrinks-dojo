@@ -1,0 +1,72 @@
+<section class="highlight-content">
+    {% if section.settings.background_image != blank %}
+    <div class="highlight-content__image-wrapper">
+        <img 
+            src="{{ section.settings.background_image | image_url: width: 1440 }}" 
+            alt="{{ section.settings.background_image.alt }}" 
+            width="{{ section.settings.background_image.width | default: 1440 }}" 
+            height="{{ section.settings.background_image.height | default: 600 }}" 
+            loading="lazy">
+    </div>
+    {% endif %}
+    <div class="container">
+        <div class="highlight-content__inner-wrapper">
+            <div class="highlight-content__content">
+                {% if section.settings.title != blank %}
+                <h2 class="highlight-content__title site-title__xxl">{{ section.settings.title }}</h2>
+                {% endif %}
+                {% if section.settings.description != blank %}
+                <div class="highlight-content__description">
+                    {{ section.settings.description }}
+                </div>
+                {% endif %}
+                {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+                <a href="{{ section.settings.button_link }}" class="btn white highlight-content__button">
+                    {{ section.settings.button_label }}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+    "name": "Highlight Content",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+        },
+        {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Label"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Highlight Content",
+            "category": "Sections"
+        }
+    ]
+}
+{% endschema %}
+
