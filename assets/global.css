@@ -1958,6 +1958,7 @@ footer {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  word-break: break-all;
 }
 .product-card-new__item .product-card-new__item--excerpt {
   font-size: 12px;
@@ -2157,6 +2158,89 @@ section.product-arrival-highlight .product-arrival-highlight__image-badge svg {
   }
 }
 
+/**************************************************
+ * Section: Content 2 Cols Simple
+ **************************************************/
+section.content-2-cols-simple {
+  padding-block: 56px;
+}
+section.content-2-cols-simple .content-2-cols-simple__inner-wrapper {
+  display: flex;
+}
+section.content-2-cols-simple .content-2-cols-simple__column {
+  width: 50%;
+}
+section.content-2-cols-simple .content-2-cols-simple__column--content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  padding-inline-end: 120px;
+}
+section.content-2-cols-simple .content-2-cols-simple__title {
+  text-transform: uppercase;
+}
+section.content-2-cols-simple .content-2-cols-simple__description {
+  color: #5b5b5b;
+  font-weight: 400;
+}
+section.content-2-cols-simple .content-2-cols-simple__column--image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.content-2-cols-simple .content-2-cols-simple__column--image img {
+  width: 100%;
+  height: auto;
+}
+section.content-2-cols-simple.reverse .content-2-cols-simple__inner-wrapper {
+  flex-direction: row-reverse;
+}
+section.content-2-cols-simple.reverse .content-2-cols-simple__column--content {
+  padding-inline-end: 0;
+  padding-inline-start: 120px;
+}
+section.content-2-cols-simple.bordered {
+  outline: 1px solid var(--color-primary);
+}
+section.content-2-cols-simple.bordered.dark {
+  outline-color: var(--color-secondary);
+}
+section.content-2-cols-simple.dark {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+section.content-2-cols-simple.dark .content-2-cols-simple__description {
+  color: var(--color-secondary);
+}
+
+@media only screen and (max-width: 991.98px) {
+  section.content-2-cols-simple .content-2-cols-simple__column--content {
+    padding-inline-end: 40px;
+  }
+  section.content-2-cols-simple.reverse .content-2-cols-simple__column--content {
+    padding-inline-start: 40px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  section.content-2-cols-simple .content-2-cols-simple__inner-wrapper {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  section.content-2-cols-simple .content-2-cols-simple__column {
+    width: 100%;
+  }
+  section.content-2-cols-simple .content-2-cols-simple__column--content {
+    padding-inline-end: 0;
+  }
+  section.content-2-cols-simple.reverse .content-2-cols-simple__column--content {
+    padding-inline-start: 0;
+  }
+  section.content-2-cols-simple.reverse .content-2-cols-simple__inner-wrapper {
+    flex-direction: column-reverse;
+  }
+}
 /**************************************************
  * Section: Content 2 Cols
  **************************************************/

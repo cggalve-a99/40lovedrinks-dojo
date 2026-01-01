@@ -1,0 +1,98 @@
+<section
+  class="
+    content-2-cols-simple
+    {% if section.settings.reverse_content %} reverse{% endif %}
+    {% if section.settings.dark_mode %} dark{% endif %}
+    {% if section.settings.bordered %} bordered{% endif %}
+  "
+  {% if section.settings.background_color != blank %}
+    style="background-color: {{ section.settings.background_color }};"
+  {% endif %}
+>
+  <div class="container">
+    <div class="content-2-cols-simple__inner-wrapper">
+      <div class="content-2-cols-simple__column content-2-cols-simple__column--content">
+        {% if section.settings.title != blank %}
+          <h2 class="content-2-cols-simple__title site-title__lg">{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="content-2-cols-simple__description general-content-container">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="content-2-cols-simple__column content-2-cols-simple__column--image">
+        {% if section.settings.image != blank %}
+          <img
+            src="{{ section.settings.image | image_url: width: 800 }}"
+            alt="{{ section.settings.image.alt | default: section.settings.title }}"
+            width="{{ section.settings.image.width | default: 800 }}"
+            height="{{ section.settings.image.height | default: 600 }}"
+            loading="lazy"
+            class="responsive-image"
+          >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Content 2 Cols Simple",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_content",
+      "label": "Reverse Content",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "dark_mode",
+      "label": "Dark Mode",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "bordered",
+      "label": "Bordered",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content 2 Cols Simple",
+      "category": "DOJO",
+      "settings": {
+        "title": "A Vision for Nutritious Indulgence",
+        "description": "<p>With unwavering determination, 40-Loves started out by formulating three unique flavors that married delicious Asian inspirations with wellness — each one a sugar-free adventure enriched with electrolytes and vitamins. Today, our products still stands as a harmonious blend of rich Asian-inspired flavors and scientific research. Cheers to a world that embraces both health and deliciousness!<p>",
+        "image": "shopify://shop_images/3.png",
+        "reverse_content": false,
+        "dark_mode": false,
+        "bordered": false
+      }
+    }
+  ]
+}
+{% endschema %}
