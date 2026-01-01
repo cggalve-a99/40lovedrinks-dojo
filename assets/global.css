@@ -2217,3 +2217,39 @@ section.content-2-cols.bordered {
     padding-inline: 0;
   }
 }
+
+/**************************************************
+ * Section: Header Banner
+ **************************************************/
+section.header-banner {
+  padding-block: 50px;
+}
+section.header-banner .header-banner__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  padding-block: 40px;
+  padding-inline: 40px;
+  max-width: 730px;
+  margin-inline: auto;
+}
+section.header-banner .header-banner__title {
+}
+section.header-banner .header-banner__description {
+  color: #717171;
+  font-weight: 400;
+}
+section.header-banner.dark {
+  background-color: var(--color-primary);
+}
+section.header-banner.dark .header-banner__inner-wrapper {
+  background-color: var(--color-secondary);
+}
+
+@media only screen and (max-width: 767.98px) {
+  section.header-banner .header-banner__inner-wrapper {
+    padding-block: 24px;
+    padding-inline: 24px;
+  }
+}

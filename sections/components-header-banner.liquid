@@ -1,0 +1,54 @@
+<section
+  class="
+    header-banner
+    {% if section.settings.dark_mode %} dark{% endif %}
+  "
+>
+  <div class="container">
+    <div class="header-banner__inner-wrapper">
+      {% if section.settings.title != blank %}
+        <h1 class="header-banner__title site-title__xl">{{ section.settings.title }}</h1>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <div class="header-banner__description general-content-container">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Header Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "checkbox",
+      "id": "dark_mode",
+      "label": "Dark Mode",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Banner",
+      "category": "DOJO",
+      "settings": {
+        "title": "Find Your Favorite Flavors",
+        "description": "<p>Shop our collagen-infused drinks — Winty, Zesty, and Mixie — that are crafted to keep you in peak form while offering flavors you'll crave with every sip.</p>",
+        "dark_mode": true
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -10,20 +10,18 @@
  {
   "layout": "collection",
   "sections": {
-    "banner": {
-      "type": "components-banner",
+    "components_header_banner_akDUwH": {
+      "type": "components-header-banner",
+      "name": "Header Banner",
       "settings": {
-        "collection_banner_title": "Refresh, Replenish, and Radiate",
-        "collection_banner_desc": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>",
-        "collection_banner_footer": ""
+        "title": "Find Your Favorite Flavors",
+        "description": "<p>Shop our collagen-infused drinks — Winty, Zesty, and Mixie — that are crafted to keep you in peak form while offering flavors you'll crave with every sip.</p>",
+        "dark_mode": true
       }
     },
     "collection-grid": {
       "type": "pages-products-list",
-      "settings": {
-        "list_header_title": "<h2>Fuel Your Day, The Hydrated Way</h2>",
-        "list_header_desc": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>"
-      }
+      "settings": {}
     },
     "components_content_2_cols_y6MqbH": {
       "type": "components-content-2-cols",
@@ -60,7 +58,7 @@
     }
   },
   "order": [
-    "banner",
+    "components_header_banner_akDUwH",
     "collection-grid",
     "components_content_2_cols_y6MqbH",
     "components_product_arrival_highlight_kf86Vm",
