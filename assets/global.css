@@ -3,6 +3,10 @@
  */
 /** Critical CSS for the theme. This file is included on every page. */
 /* Reset styles inspired by https://www.joshwcomeau.com/css/custom-css-reset/ */
+:root {
+  --split-screen-container-width: 1304px;
+  --split-screen-guttter: 32px;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -1714,6 +1718,32 @@ footer {
 /**************************************************
  * General
  **************************************************/
+.split-screen {
+  display: grid;
+  grid-template-columns:
+    1fr
+    minmax(0, calc(var(--split-screen-container-width) / 2))
+    minmax(0, calc(var(--split-screen-container-width) / 2))
+    1fr;
+  width: 100%;
+}
+.split-screen-left {
+  grid-column: 2;
+  padding-inline-start: var(--split-screen-guttter);
+}
+.split-screen-right {
+  grid-column: 3 / 5;
+}
+.split-screen.reverse .split-screen-left {
+  grid-column: 3;
+  order: 2;
+  padding-inline-start: 0;
+  padding-inline-end: var(--split-screen-guttter);
+}
+.split-screen.reverse .split-screen-right {
+  grid-column: 1 / 3;
+  order: 1;
+}
 .responsive-image {
   width: 100%;
   height: 100%;
@@ -1727,6 +1757,19 @@ footer {
 }
 .general-content-container p:last-child {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .split-screen {
+    grid-template-columns: 1fr;
+  }
+  .split-screen-left,
+  .split-screen.reverse .split-screen-left {
+    grid-column: 1;
+    padding-inline: 24px;
+  }
+  .split-screen-right {
+    grid-column: 1;
+  }
 }
 /**************************************************
  * Headline
@@ -1807,6 +1850,7 @@ footer {
 /**************************************************
  * Collections List
  **************************************************/
+.collection__list,
 .collections-list {
   padding-block: 56px;
 }
@@ -2110,5 +2154,66 @@ section.product-arrival-highlight .product-arrival-highlight__image-badge svg {
   }
   section.product-arrival-highlight .product-arrival-highlight__inner-wrapper {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/**************************************************
+ * Section: Content 2 Cols
+ **************************************************/
+section.content-2-cols .content-2-cols__column--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+  padding-block: 24px;
+  padding-inline-end: 100px;
+  height: 100%;
+}
+section.content-2-cols .content-2-cols__description {
+  color: #616161;
+}
+section.content-2-cols .content-2-cols__column--media {
+  min-height: 480px;
+  height: 100%;
+}
+section.content-2-cols .content-2-cols__video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+section.content-2-cols .content-2-cols__video,
+section.content-2-cols .content-2-cols__image {
+  width: 100%;
+  height: 100%;
+}
+section.content-2-cols.reverse .content-2-cols__column--content {
+  padding-inline-start: 100px;
+  padding-inline-end: 0;
+}
+section.content-2-cols.dark {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+section.content-2-cols.dark .content-2-cols__description {
+  color: var(--color-secondary);
+}
+section.content-2-cols.bordered {
+  outline: 1px solid var(--color-primary);
+}
+
+@media only screen and (max-width: 991.98px) {
+  section.content-2-cols .content-2-cols__column--content,
+  section.content-2-cols.reverse .content-2-cols__column--content {
+    padding-inline: 24px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  section.content-2-cols .content-2-cols__column--content,
+  section.content-2-cols.reverse .content-2-cols__column--content {
+    padding-inline: 0;
   }
 }
