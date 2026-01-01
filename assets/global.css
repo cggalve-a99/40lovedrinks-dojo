@@ -1712,6 +1712,23 @@ footer {
 }
 
 /**************************************************
+ * General
+ **************************************************/
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.general-content-container p {
+  margin-bottom: 0.75rem;
+}
+.general-content-container p:last-child {
+  margin-bottom: 0;
+}
+/**************************************************
  * Headline
  **************************************************/
 .headline {
@@ -1867,12 +1884,6 @@ footer {
 }
 .product-card-new__item .product-card-new__item--image img {
   aspect-ratio: 420/300;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
 }
 .product-card-new__item .product-card-new__item--content {
   display: flex;
@@ -1947,14 +1958,6 @@ section.highlight-content .highlight-content__image-wrapper {
   inset: 0;
   z-index: 1;
 }
-section.highlight-content .highlight-content__image-wrapper img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-}
 section.highlight-content .highlight-content__image-wrapper:after {
   content: '';
   position: absolute;
@@ -2003,5 +2006,109 @@ section.highlight-content .highlight-content__button:hover {
   }
   section.highlight-content .highlight-content__description p {
     font-size: inherit;
+  }
+}
+
+/**************************************************
+ * Section: Product Arrival Highlight
+ **************************************************/
+section.product-arrival-highlight {
+  background-color: var(--color-primary);
+  padding-block: 100px;
+}
+section.product-arrival-highlight .product-arrival-highlight__inner-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
+  row-gap: 16px;
+}
+section.product-arrival-highlight .product-arrival-highlight__inner-wrapper > div {
+  min-height: 400px;
+}
+section.product-arrival-highlight .product-arrival-highlight__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+  padding-block: 76px;
+  padding-inline: 84px;
+  text-align: center;
+}
+section.product-arrival-highlight .product-arrival-highlight__content-inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+section.product-arrival-highlight .product-arrival-highlight__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+section.product-arrival-highlight .product-arrival-highlight__spotlight {
+  color: #717171;
+  font-weight: 400;
+}
+section.product-arrival-highlight .product-arrival-highlight__title {
+  font-weight: 700;
+}
+section.product-arrival-highlight .product-arrival-highlight__description {
+  color: #717171;
+  font-weight: 400;
+}
+section.product-arrival-highlight .product-arrival-highlight__button {
+  margin-top: 40px;
+  margin-inline: auto;
+  border-radius: 0;
+}
+section.product-arrival-highlight .product-arrival-highlight__image-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+section.product-arrival-highlight .product-arrival-highlight__image {
+  flex: 1;
+  min-height: 335px;
+}
+section.product-arrival-highlight .product-arrival-highlight__image-badge-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--color-secondary);
+  padding-block: 16px;
+}
+section.product-arrival-highlight .product-arrival-highlight__image-badge-wrapper-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+section.product-arrival-highlight .product-arrival-highlight__image-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+section.product-arrival-highlight .product-arrival-highlight__image-badge svg {
+  max-width: none;
+}
+
+@media only screen and (max-width: 991.98px) {
+  section.product-arrival-highlight .product-arrival-highlight__content {
+    padding-block: 24px;
+    padding-inline: 24px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  section.product-arrival-highlight {
+    padding-block: 56px;
+  }
+  section.product-arrival-highlight .product-arrival-highlight__inner-wrapper {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

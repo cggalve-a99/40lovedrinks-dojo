@@ -1,0 +1,96 @@
+{% if section.settings.product != blank %}
+  {% assign selectedProduct = all_products[section.settings.product] %}
+
+  <section class="product-arrival-highlight">
+    <div class="container">
+      <div class="product-arrival-highlight__inner-wrapper">
+        <div class="product-arrival-highlight__content">
+          <div class="product-arrival-highlight__content-inner">
+            <div class="product-arrival-highlight__header">
+              {% if section.settings.spotlight_text != blank %}
+                <div class="product-arrival-highlight__spotlight">
+                  {{ section.settings.spotlight_text }}
+                </div>
+              {% endif %}
+              {% if selectedProduct.title != blank %}
+                <h2 class="product-arrival-highlight__title site-title__xl">{{ selectedProduct.title }}</h2>
+              {% endif %}
+            </div>
+
+            {% if section.settings.description != blank %}
+              <div class="product-arrival-highlight__description general-content-container">
+                {{ section.settings.description }}
+              </div>
+            {% endif %}
+          </div>
+          {% if section.settings.button_label != blank and selectedProduct.url != blank %}
+            <a href="{{ selectedProduct.url }}" class="btn product-arrival-highlight__button">
+              {{ section.settings.button_label }}
+              {{ selectedProduct.price | money }}
+            </a>
+          {% endif %}
+        </div>
+        {% if selectedProduct.featured_image != blank %}
+          <div class="product-arrival-highlight__image-wrapper">
+            <div class="product-arrival-highlight__image">
+              <img
+                src="{{ selectedProduct.featured_image | image_url: width: 800 }}"
+                alt="{{ selectedProduct.title }}"
+                width="{{ selectedProduct.featured_image.width | default: 800 }}"
+                height="{{ selectedProduct.featured_image.height | default: 600 }}"
+                loading="lazy"
+                class="responsive-image"
+              >
+            </div>
+            <div class="product-arrival-highlight__image-badge-wrapper">
+              <div class="product-arrival-highlight__image-badge-wrapper-inner">
+                {% for i in (1..5) %}
+                  <span class="product-arrival-highlight__image-badge">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.1626 9.16112C17.1275 9.01097 17.0558 8.87182 16.954 8.75598C16.8522 8.64015 16.7234 8.55121 16.579 8.49706L12.3259 6.90253L13.4196 1.43378C13.4596 1.23377 13.4333 1.02617 13.3446 0.842482C13.256 0.658792 13.1098 0.509028 12.9283 0.415907C12.7469 0.322786 12.54 0.291389 12.3391 0.326478C12.1381 0.361566 11.9541 0.461226 11.815 0.610341L3.06496 9.98534C2.95968 10.098 2.88383 10.2349 2.84412 10.3839C2.80441 10.5329 2.80207 10.6894 2.8373 10.8396C2.87253 10.9897 2.94425 11.1288 3.0461 11.2446C3.14796 11.3604 3.2768 11.4492 3.42121 11.5033L7.67433 13.0978L6.58058 18.5666C6.5406 18.7666 6.56693 18.9742 6.6556 19.1579C6.74426 19.3416 6.89041 19.4913 7.07188 19.5845C7.25335 19.6776 7.46024 19.709 7.66117 19.6739C7.8621 19.6388 8.0461 19.5391 8.18527 19.39L16.9353 10.015C17.0404 9.90235 17.1162 9.76548 17.1559 9.61654C17.1955 9.4676 17.1978 9.31118 17.1626 9.16112ZM9.06652 15.6978L9.66964 12.6838C9.71327 12.4655 9.6778 12.2388 9.56959 12.0443C9.46138 11.8498 9.28748 11.7001 9.07902 11.6221L5.39074 10.24L10.9321 4.30253L10.329 7.31659C10.2854 7.53487 10.3209 7.76155 10.4291 7.95607C10.5373 8.15059 10.7112 8.30027 10.9196 8.37831L14.6095 9.76034L9.06652 15.6978Z" fill="#1B1B1B"/>
+                    </svg>
+                    <span>New Arrival</span>
+                  </span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product Arrival Highlight",
+  "settings": [
+    {
+      "type": "text",
+      "id": "spotlight_text",
+      "label": "Spotlight Text"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Arrival Highlight",
+      "category": "Sections"
+    }
+  ]
+}
+{% endschema %}

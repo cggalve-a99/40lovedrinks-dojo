@@ -6,7 +6,9 @@
             alt="{{ section.settings.background_image.alt }}" 
             width="{{ section.settings.background_image.width | default: 1440 }}" 
             height="{{ section.settings.background_image.height | default: 600 }}" 
-            loading="lazy">
+            loading="lazy"
+            class="responsive-image"
+        >
     </div>
     {% endif %}
     <div class="container">
@@ -64,7 +66,14 @@
     "presets": [
         {
             "name": "Highlight Content",
-            "category": "Sections"
+            "category": "Sections",
+            "settings": {
+                "title": "Save 25% with Endless 40-LOVE",
+                "description": "<p>Never run out of your favorite flavors when you join our fam. Subscribe <br/>and save on every order — your wallet (and digestion) will thank you.</p>",
+                "button_label": "SUBSCRIBE & SAVE",
+                "button_link": "shopify://pages/pricing",
+                "background_image": "shopify://shop_images/f309fa71540ceba3ffe71cb29dcc27e144f09a3c.jpg"
+            }
         }
     ]
 }

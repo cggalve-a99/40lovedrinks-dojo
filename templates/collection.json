@@ -7,79 +7,73 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
     "layout": "collection",
     "sections": {
-        "banner": {
-            "type": "components-banner",
-            "settings": {
-                "collection_banner_title": "Refresh, Replenish, and Radiate",
-                "collection_banner_desc": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>"
-            }
-        },
-        "collection-grid": {
-            "type": "pages-products-list",
-            "settings": {
-                "list_header_title": "<h2>Fuel Your Day, The Hydrated Way</h2>",
-                "list_header_desc": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>"
-            }
-        },
-        "cta-section": {
-            "type": "components-cta-section",
-            "blocks": {
-            "cta_card_1": {
-                "type": "cta_card",
-                "settings": {
-                    "card_title": "Backed by Science and Nature",
-                    "card_description": "<p>Not all sodium is the same. Sodium chloride, commonly known as table salt, is a fast-acting form that helps restore the sodium lost through sweat and supports hydration, muscle function, and nerve signaling.<br><br></p> <p>Sodium citrate is a more advanced form, combining sodium with citric acid for smoother digestion and added benefits like buffering acid buildup in the body. It’s especially helpful during endurance efforts, as it can reduce the risk of cramping and fatigue. 40-Love, uses a smart blend of both to deliver hydration that works hard and feels good.</p>",
-                    "card_video_url": "",
-                    "card_button_label": "",
-                    "card_button_link": ""
-                }
-            },
-            "cta_card_2": {
-                "type": "cta_card",
-                "settings": {
-                    "card_title": "",
-                    "card_description": "",
-                    "card_video_url": "https://cdn.shopify.com/videos/c/o/v/15d639fcb76443aa87dc0e29b4dac6c6.mp4",
-                    "card_button_label": "",
-                    "card_button_link": ""
-                }
-            }
-            },
-            "block_order": [
-                "cta_card_1",
-                "cta_card_2"
-            ],
-            "settings": {
-                "cta_section_title": ""
-            }
-        },
-        "new-product": {
-            "type": "components-new-product-arrival",
-            "settings": {
-                "new_arrival": "mixie",
-                "slider_collection": "",
-                "product_limit": 3,
-                "show_slider": false
-            }
-        },
-        "subscription-highlight": {
-            "type": "components-subscription-highlight",
-            "settings": {
-                "subscription_title": "Save 25% with Endless 40-LOVE",
-                "subscription_desc": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
-                "subscription_button_label": "Subscribe & Save",
-                "subscription_button_link": "#"
-            }
+      "banner": {
+        "type": "components-banner",
+        "settings": {
+          "collection_banner_title": "Refresh, Replenish, and Radiate",
+          "collection_banner_desc": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>",
+          "collection_banner_footer": ""
         }
+      },
+      "collection-grid": {
+        "type": "pages-products-list",
+        "settings": {
+          "list_header_title": "<h2>Fuel Your Day, The Hydrated Way</h2>",
+          "list_header_desc": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>"
+        }
+      },
+      "cta-section": {
+        "type": "components-cta-section",
+        "blocks": {
+          "cta_card_1": {
+            "type": "cta_card",
+            "settings": {
+              "card_title": "Backed by Science and Nature",
+              "card_description": "<p>Not all sodium is the same. Sodium chloride, commonly known as table salt, is a fast-acting form that helps restore the sodium lost through sweat and supports hydration, muscle function, and nerve signaling.<br><br></p> <p>Sodium citrate is a more advanced form, combining sodium with citric acid for smoother digestion and added benefits like buffering acid buildup in the body. It’s especially helpful during endurance efforts, as it can reduce the risk of cramping and fatigue. 40-Love, uses a smart blend of both to deliver hydration that works hard and feels good.</p>",
+              "card_video_url": "",
+              "card_button_label": "",
+              "card_button_link": ""
+            }
+          },
+          "cta_card_2": {
+            "type": "cta_card",
+            "settings": {
+              "card_title": "",
+              "card_description": "",
+              "card_video_url": "https://cdn.shopify.com/videos/c/o/v/15d639fcb76443aa87dc0e29b4dac6c6.mp4",
+              "card_button_label": "",
+              "card_button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "cta_card_1",
+          "cta_card_2"
+        ],
+        "settings": {
+          "cta_section_title": ""
+        }
+      },
+      "components_highlight_content_REEfGQ": {
+        "type": "components-highlight-content",
+        "name": "Highlight Content",
+        "settings": {
+          "title": "Save 25% with Endless 40-LOVE",
+          "description": "<p>Never run out of your favorite flavors when you join our fam. Subscribe <br/>and save on every order — your wallet (and digestion) will thank you.</p>",
+          "button_label": "SUBSCRIBE & SAVE",
+          "button_link": "shopify://pages/pricing",
+          "background_image": "shopify://shop_images/f309fa71540ceba3ffe71cb29dcc27e144f09a3c.jpg"
+        }
+      }
     },
     "order": [
-        "banner",
-        "collection-grid",
-        "cta-section",
-        "new-product",
-        "subscription-highlight"
+      "banner",
+      "collection-grid",
+      "cta-section",
+      "components_highlight_content_REEfGQ"
     ]
-}
+  }
+  
