@@ -23,60 +23,88 @@
         "button_link": "shopify://pages/pricing"
       }
     },
+    "components_header_banner_QR6xYU": {
+      "type": "components-header-banner",
+      "name": "Header Banner",
+      "settings": {
+        "title": "Hydration for Life in Motion",
+        "description": "<p>A daily blend of electrolytes and collagen designed to support movement, recovery, and everyday rituals.</p>",
+        "dark_mode": true
+      }
+    },
     "components_main_product_slider_i4LVEd": {
       "type": "components-main-product-slider",
       "blocks": {
         "product_bzLngx": {
           "type": "product",
           "settings": {
-            "product": "zesty-coconut"
+            "product": "zesty-coconut",
+            "title": "Coconut",
+            "description": "<p><strong>Tropical, clean, and grounding.</strong></p><p><strong>Cool, light hydration</strong> that meets the body after heat and movement — and helps the body settle back into balance.</p>"
           }
         },
         "product_JPx7EL": {
           "type": "product",
           "settings": {
-            "product": "zesty-lychee"
+            "product": "zesty-lychee",
+            "title": "Lychee",
+            "description": "<p><strong>Light, floral, and juicy.</strong></p><p>Crisp, cooling hydration with a gentle lychee finish — bright and refreshing without weight.</p>"
           }
         },
         "product_DcFah8": {
           "type": "product",
           "settings": {
-            "product": "zesty-cucumber-lemon"
+            "product": "zesty-cucumber-lemon",
+            "title": "Cucumber lemon",
+            "description": "<p><strong>Crisp, clean, and zesty.</strong></p><p>Cool hydration with fresh cucumber and a quiet citrus edge — clean, light, and easy to drink.</p>"
           }
         }
       },
-      "block_order": [
-        "product_bzLngx",
-        "product_JPx7EL",
-        "product_DcFah8"
-      ],
+      "block_order": ["product_bzLngx", "product_JPx7EL", "product_DcFah8"],
       "name": "Main Product Slider",
-      "settings": {}
-    },
-    "cta-section": {
-      "type": "pages-home-cta-section",
-      "disabled": true,
       "settings": {
-        "cta_1_title": "Refresh, Replenish, and Radiate",
-        "cta_1_description": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>",
-        "cta_1_button_label": "Shop All Flavors",
-        "cta_1_button_link": "#",
-        "cta_2_title": "The Benefits of Collagen and Electrolytes Drink",
-        "cta_2_description": "<p>Hydration powers energy, focus, and performance, but water alone won't cut it. You need electrolytes to regulate fluid balance and maximize absorption.</p>",
-        "cta_2_button_label": "Learn More",
-        "cta_2_button_link": "#"
+        "show_price": false
       }
     },
-    "hero-section": {
-      "type": "pages-home-hero-section",
-      "disabled": true,
+    "components_main_cta_wghqnr": {
+      "type": "components-main-cta",
+      "blocks": {
+        "cta_item_GAYNRG": {
+          "type": "cta_item",
+          "settings": {
+            "title": "Thoughtful Hydration",
+            "description": "<p>A balanced blend of electrolytes supports daily movement, endurance, and recovery — without overdoing it.</p>",
+            "image": "shopify://shop_images/5.jpg",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "cta_item_pPDFNV": {
+          "type": "cta_item",
+          "settings": {
+            "title": "Easy to Drink. Easy to Return To.",
+            "description": "<p>Most electrolyte drinks are built for extremes.</p><p>40-LOVE is built for consistency — effective hydration that tastes good enough to come back to, again and again.</p>",
+            "image": "shopify://shop_images/5.jpg",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "cta_item_VxBW8e": {
+          "type": "cta_item",
+          "settings": {
+            "title": "Everyday Ritual",
+            "description": "<p>More than hydration — a drink that fits naturally into how you move, recover, and live. After workouts, between meetings, or during long days in the heat.</p>",
+            "image": "shopify://shop_images/5.jpg",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": ["cta_item_GAYNRG", "cta_item_pPDFNV", "cta_item_VxBW8e"],
+      "name": "Main CTA",
       "settings": {
-        "hero_title": "Fuel Your Day, The Hydrated Way",
-        "hero_description": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>",
-        "hero_button_label": "Shop All Flavors",
-        "hero_button_link": "#",
-        "hero_image": "shopify://shop_images/hero-image.webp",
-        "hero_background": "shopify://shop_images/hero-background.webp"
+        "grid_items": 3,
+        "display_button": false
       }
     },
     "components_content_2_cols_UJnphH": {
@@ -103,102 +131,45 @@
         "background_image": "shopify://shop_images/subscription-highlight.webp"
       }
     },
-    "subscription-highlight": {
-      "type": "components-subscription-highlight",
-      "disabled": true,
-      "settings": {
-        "subscription_title": "Save 25% with Endless 40-LOVE",
-        "subscription_desc": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
-        "subscription_button_label": "Subscribe & Save",
-        "subscription_button_link": "#"
-      }
-    },
-    "formula-highlight": {
-      "type": "components-formula-highlight",
+    "components_main_cta_RMDTGz": {
+      "type": "components-main-cta",
       "blocks": {
-        "key_ingredient_1": {
-          "type": "key_ingredient",
+        "cta_item_dGxtkM": {
+          "type": "cta_item",
           "settings": {
-            "key_title": "Hydrolyzed Marine Collagen",
-            "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
-            "key_icon": "vector-marine-collagen.svg"
+            "title": "Designed With Intention",
+            "description": "<p>Inspired by Japanese principles of restraint, balance, and doing less — but better.</p>",
+            "image": "shopify://shop_images/7.jpg",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "key_ingredient_2": {
-          "type": "key_ingredient",
+        "cta_item_JbVz8J": {
+          "type": "cta_item",
           "settings": {
-            "key_title": "Stevia",
-            "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
-            "key_icon": "vector-stevia.svg"
+            "title": "For the Long Game",
+            "description": "<p>Created for people who are still moving, still training, and still showing up — without shortcuts.</p>",
+            "image": "shopify://shop_images/6.jpg",
+            "button_label": "",
+            "button_link": ""
           }
         },
-        "key_ingredient_3": {
-          "type": "key_ingredient",
+        "cta_item_RBNXfM": {
+          "type": "cta_item",
           "settings": {
-            "key_title": "Zinc",
-            "key_desc": "<p>Improves focus, reduces stress, and enhances mental performance.</p>",
-            "key_icon": "vector-zinc.svg"
-          }
-        },
-        "key_ingredient_4": {
-          "type": "key_ingredient",
-          "settings": {
-            "key_title": "Magnesium",
-            "key_desc": "<p>Relieves soreness, boosts energy production at a cellular level and aids muscle recovery.</p>",
-            "key_icon": "vector-magnesium.svg"
-          }
-        },
-        "key_ingredient_5": {
-          "type": "key_ingredient",
-          "settings": {
-            "key_title": "Sodium",
-            "key_desc": "<p>Essential for hydration, reducing cramps, and boosting peak cellular performance.</p>",
-            "key_icon": "vector-sodium.svg"
-          }
-        },
-        "key_ingredient_6": {
-          "type": "key_ingredient",
-          "settings": {
-            "key_title": "Potassium",
-            "key_desc": "<p>Accelerates recovery, regulates nerve signals, and fights muscle fatigue.</p>",
-            "key_icon": "vector-potassium.svg"
+            "title": "Grounded Where We’re From",
+            "description": "<p>Shaped by Filipino warmth, openness, and connection. Manufactured in the Philippines, where daily movement and shared rituals are part of life.</p>",
+            "image": "shopify://shop_images/9.jpg",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
-      "block_order": [
-        "key_ingredient_1",
-        "key_ingredient_2",
-        "key_ingredient_3",
-        "key_ingredient_4",
-        "key_ingredient_5",
-        "key_ingredient_6"
-      ],
+      "block_order": ["cta_item_dGxtkM", "cta_item_JbVz8J", "cta_item_RBNXfM"],
+      "name": "Main CTA",
       "settings": {
-        "formula_title": "The Ultimate Formula To Get Hydrated",
-        "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
-      }
-    },
-    "new-product": {
-      "type": "components-new-product-arrival",
-      "disabled": true,
-      "settings": {
-        "section_title": "",
-        "new_arrival": "mixie",
-        "slider_collection": "product-slider",
-        "product_limit": 3,
-        "show_slider": true,
-        "show_product_delivery_timeline": false,
-        "button_label_prefix": "GET"
-      }
-    },
-    "featured-testimonial": {
-      "type": "components-featured-testimonial",
-      "disabled": true,
-      "settings": {
-        "featured_testimonials": [
-          "roy-de-guzman",
-          "clarisse-jones"
-        ]
+        "grid_items": 3,
+        "display_button": false
       }
     },
     "components_content_2_cols_UHAzhc": {
@@ -253,116 +224,12 @@
           }
         }
       },
-      "block_order": [
-        "faq_question_1",
-        "faq_question_2",
-        "faq_question_3",
-        "faq_question_4",
-        "faq_question_5"
-      ],
+      "block_order": ["faq_question_1", "faq_question_2", "faq_question_3", "faq_question_4", "faq_question_5"],
       "settings": {
         "faq_title": "FAQ",
         "faq_desc": "<p>If you don't see your question answered here, please don't hesitate to contact us or visit the extended FAQ section here.</p>"
       }
-    },
-    "brand-section": {
-      "type": "pages-home-brand-section",
-      "blocks": {
-        "brand_1": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/encore-logo.webp"
-          }
-        },
-        "brand_2": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/base-logo.webp"
-          }
-        },
-        "brand_3": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/bpc-logo.webp"
-          }
-        },
-        "brand_4": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/iron-hive-logo.webp"
-          }
-        },
-        "brand_5": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/rbsc-logo.webp"
-          }
-        },
-        "brand_6": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/training-ground-logo.webp"
-          }
-        },
-        "brand_7": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/on-track-logo.webp"
-          }
-        },
-        "brand_8": {
-          "type": "brand",
-          "settings": {
-            "brand_logo": "shopify://shop_images/unreal-gym-logo.webp"
-          }
-        }
-      },
-      "block_order": [
-        "brand_1",
-        "brand_2",
-        "brand_3",
-        "brand_4",
-        "brand_5",
-        "brand_6",
-        "brand_7",
-        "brand_8"
-      ],
-      "disabled": true,
-      "settings": {
-        "brand_title": "Premier Wellness Brands",
-        "brand_desc": "<p>Trusted 40-Loves Drinks</p>",
-        "brand_image": "shopify://shop_images/trusted-brand-images.webp"
-      }
-    },
-    "testimonial-section": {
-      "type": "components-testimonials",
-      "disabled": true,
-      "settings": {
-        "section_title": "Customer Testimonials",
-        "testimonials": [
-          "roy-de-guzman",
-          "clarisse-jones",
-          "cherry-natividad",
-          "samuel-cheng",
-          "john-camp"
-        ]
-      }
     }
   },
-  "order": [
-    "components_headline_banner_gzPyqx",
-    "components_main_product_slider_i4LVEd",
-    "cta-section",
-    "hero-section",
-    "components_content_2_cols_UJnphH",
-    "components_highlight_content_948RFf",
-    "subscription-highlight",
-    "formula-highlight",
-    "new-product",
-    "featured-testimonial",
-    "components_content_2_cols_UHAzhc",
-    "faq-section",
-    "brand-section",
-    "testimonial-section"
-  ]
+  "order": ["components_headline_banner_gzPyqx", "components_header_banner_QR6xYU", "components_main_product_slider_i4LVEd", "components_main_cta_wghqnr", "components_content_2_cols_UJnphH", "components_highlight_content_948RFf", "components_main_cta_RMDTGz", "components_content_2_cols_UHAzhc", "faq-section"]
 }
