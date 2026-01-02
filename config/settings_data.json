@@ -8,15 +8,15 @@
  * ------------------------------------------------------------
  */
 {
-    "current": {
-        "type_primary_font": "poppins_n4",
-        "max_page_width": "90rem",
-        "logo": "shopify://shop_images/40lovesdrink-logo-small.png",
-        "menu": "main-menu-1",
-        "footer_menu": "footer",
-        "footer_logo": "shopify://shop_images/40lovedrinks-logo-large.png",
-        "header_text": "Sign up for our newsletters",
-        "header_desc": "<p>Get new product announcements, exclusive contents, and discounts.</p>",
-        "content_for_index": []
-    }
+  "current": {
+    "type_primary_font": "poppins_n4",
+    "max_page_width": "90rem",
+    "logo": "shopify://shop_images/40lovesdrink-logo-small.png",
+    "menu": "main-menu-1",
+    "footer_menu": "footer",
+    "footer_logo": "shopify://shop_images/40lovedrinks-logo-large.png",
+    "header_text": "Sign up for our newsletters",
+    "header_desc": "<p>Get new product announcements, exclusive contents, and discounts.</p>",
+    "content_for_index": []
+  }
 }

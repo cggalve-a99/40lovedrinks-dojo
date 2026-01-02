@@ -1613,109 +1613,6 @@ footer {
 }
 
 /**************************************************
- * Two Cols Content
- **************************************************/
-.two-cols-content {
-  padding-block: 56px;
-}
-
-.two-cols-content.two-cols-content--with-border {
-  border-top: 1px solid var(--color-primary);
-}
-
-.two-cols-content .two-cols-content__inner-wrapper {
-  display: flex;
-  align-items: center;
-  column-gap: 120px;
-}
-
-.two-cols-content .two-cols-content__inner-wrapper.two-cols-content__inner-wrapper--reverse {
-  flex-direction: row-reverse;
-}
-
-.two-cols-content .two-cols-content__column--text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
-}
-
-.two-cols-content .two-cols-content__title {
-  font-size: 30px;
-}
-.two-cols-content .two-cols-content__description {
-  color: #5b5b5b;
-}
-.two-cols-content .two-cols-content__description p {
-  margin-bottom: 0.75rem;
-}
-
-.two-cols-content .two-cols-content__description p:last-child {
-  margin-bottom: 0;
-}
-
-.two-cols-content .two-cols-content__column--image {
-  width: min(50%, 620px);
-}
-
-.two-cols-content .two-cols-content__column--image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-}
-
-@media only screen and (max-width: 1199.98px) {
-  .two-cols-content .two-cols-content__inner-wrapper {
-    column-gap: 40px;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .two-cols-content {
-    padding-block: 12px;
-    background-color: transparent !important;
-  }
-
-  .two-cols-content.two-cols-content--with-border {
-    border: none;
-  }
-
-  .two-cols-content .two-cols-content__inner-wrapper {
-    flex-direction: column;
-    border-radius: 24px;
-    overflow: hidden;
-    outline: 1px solid var(--color-primary);
-    flex-direction: column-reverse;
-  }
-
-  .two-cols-content .two-cols-content__inner-wrapper.two-cols-content__inner-wrapper--reverse {
-    flex-direction: column-reverse;
-  }
-
-  .two-cols-content .two-cols-content__column--text {
-    width: 100%;
-    padding-block: 24px;
-    padding-inline: 24px;
-    row-gap: 16px;
-  }
-
-  .two-cols-content .two-cols-content__column--image {
-    width: 100%;
-    height: 440px;
-  }
-}
-
-@media only screen and (max-width: 575.98px) {
-  .two-cols-content .two-cols-content__column--image {
-    height: 220px;
-  }
-}
-
-/**************************************************
  * General
  **************************************************/
 .split-screen {
@@ -2318,8 +2215,6 @@ section.header-banner .header-banner__inner-wrapper {
   max-width: 730px;
   margin-inline: auto;
 }
-section.header-banner .header-banner__title {
-}
 section.header-banner .header-banner__description {
   color: #717171;
   font-weight: 400;
@@ -2335,5 +2230,65 @@ section.header-banner.dark .header-banner__inner-wrapper {
   section.header-banner .header-banner__inner-wrapper {
     padding-block: 24px;
     padding-inline: 24px;
+  }
+}
+
+/**************************************************
+ * Section: Headline Banner
+ **************************************************/
+section.headline-banner {
+  display: flex;
+  align-items: center;
+  min-height: 700px;
+  position: relative;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding-block: 100px;
+}
+section.headline-banner .headline-banner__inner-wrapper {
+  position: relative;
+  z-index: 2;
+}
+section.headline-banner .headline-banner__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  text-align: center;
+}
+section.headline-banner .headline-banner__content-top,
+section.headline-banner .headline-banner__content-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+}
+section.headline-banner .headline-banner__button {
+  margin-block-start: 40px;
+  margin-inline: auto;
+  border-radius: 0;
+  border: none;
+}
+section.headline-banner .headline-banner__button:hover {
+  border: none;
+}
+section.headline-banner .headline-banner__image {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+}
+section.headline-banner .headline-banner__image:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+@media only screen and (max-width: 767.98px) {
+  section.headline-banner {
+    min-height: auto;
+    padding-block: 56px;
   }
 }

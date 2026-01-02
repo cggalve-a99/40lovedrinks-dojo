@@ -1,0 +1,99 @@
+<section class="headline-banner">
+  <div class="container">
+    <div class="headline-banner__inner-wrapper">
+      <div class="headline-banner__content">
+        <div class="headline-banner__content-top">
+          {% if section.settings.title != blank %}
+            <h1 class="headline-banner__title site-title__xl">
+              {{ section.settings.title | strip_html | newline_to_br }}
+            </h1>
+          {% endif %}
+          {% if section.settings.description != blank %}
+            <div class="headline-banner__description general-content-container">
+              {{ section.settings.description }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="headline-banner__content-bottom">
+          {% if section.settings.review_text != blank %}
+            <div class="headline-banner__review">
+              {{ section.settings.review_text }}
+            </div>
+          {% endif %}
+          {% if section.settings.show_payment_methods %}
+            <div class="headline-banner__payment-methods">
+              {% render 'global-payment-methods' %}
+            </div>
+          {% endif %}
+        </div>
+        {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+          <a href="{{ section.settings.button_link }}" class="btn white headline-banner__button">
+            {{ section.settings.button_label }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if section.settings.image != blank %}
+    <div class="headline-banner__image">
+      <img
+        src="{{ section.settings.image | image_url: width: 1200 }}"
+        alt="{{ section.settings.image.alt | default: section.settings.title }}"
+        width="{{ section.settings.image.width | default: 1200 }}"
+        height="{{ section.settings.image.height | default: 800 }}"
+        loading="eager"
+        class="responsive-image"
+      >
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Headline Banner",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "review_text",
+      "label": "Review Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_methods",
+      "label": "Show Payment Methods",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Headline Banner",
+      "category": "DOJO"
+    }
+  ]
+}
+{% endschema %}

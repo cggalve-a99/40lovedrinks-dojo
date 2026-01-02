@@ -10,96 +10,130 @@
 {
   "layout": "about",
   "sections": {
-    "banner": {
-      "type": "components-banner",
+    "components_header_banner_dQLkWj": {
+      "type": "components-header-banner",
+      "name": "Header Banner",
       "settings": {
-        "collection_banner_title": "We're More Than a Business",
-        "collection_banner_desc": "<p>We're a family on a journey to better health.</p>"
+        "title": "We're More Thana Business",
+        "description": "<p>We're a family on a journey to better health.</p>",
+        "dark_mode": false
       }
     },
-    "the-philosophy-behind-40-love": {
-      "type": "components-2-cols-content",
+    "components_content_2_cols_simple_m8zJBb": {
+      "type": "components-content-2-cols-simple",
+      "name": "Content 2 Cols Simple",
       "settings": {
         "title": "THE PHILOSOPHY BEHIND 40-LOVE",
         "description": "<p>In tennis, <em>40-LOVE</em> is a winning position — but the match isn't over yet.</p><p>There's still another point to play.</p><p>We chose the name as a reminder that being ahead doesn't mean you stop showing up.</p><p>It's a moment that asks for presence, composure, and intention.</p><p>40-LOVE represents a mindset — caring about how you move, how you recover, and how you show up over time.</p><p>Not extremes. Not shortcuts. Just consistency, played one point at a time.</p><p>Hydration, in that sense, becomes more than function.</p><p>It becomes part of how you stay in the game.</p>",
         "image": "shopify://shop_images/our-story-image.webp",
-        "column_reverse": true
+        "reverse_content": true,
+        "dark_mode": false,
+        "bordered": false,
+        "background_color": ""
       }
     },
-    "beyond-hydration": {
-      "type": "components-2-cols-content",
+    "components_content_2_cols_simple_xJrzAM": {
+      "type": "components-content-2-cols-simple",
+      "name": "Content 2 Cols Simple",
       "settings": {
         "title": "BEYOND HYDRATION",
         "description": "<p>Most hydration products focus on numbers, intensity, or quick fixes.</p><p>40-LOVE takes a different approach.</p><p>We believe hydration has a <strong>flavor</strong> — not just in taste, but in experience.</p><p>How it fits into your routine.</p><p>How it feels in motion.</p><p>How it supports both effort and recovery.</p><p>That's why we think of 40-LOVE as <strong>fuel for mind, body, and soul</strong> — a daily ritual that supports movement, clarity, and balance.</p>",
         "image": "shopify://shop_images/our-story-image.webp",
+        "reverse_content": false,
+        "dark_mode": false,
+        "bordered": false,
         "background_color": "#f9f8f6"
       }
     },
-    "the-40-love-ethos": {
-      "type": "components-headline",
+    "components_header_banner_JCHEGi": {
+      "type": "components-header-banner",
+      "name": "Header Banner",
       "settings": {
-        "title": "THE 40-LOVE ETHOS"
+        "title": "THE 40-LOVE ETHOS",
+        "description": "",
+        "dark_mode": false
       }
     },
-    "mind-body-soul": {
-      "type": "components-2-cols-content",
+    "components_content_2_cols_simple_8VGTA9": {
+      "type": "components-content-2-cols-simple",
+      "name": "Content 2 Cols Simple",
       "settings": {
         "title": "Mind. Body. Soul.",
         "description": "<p>40-LOVE is built around three pillars that shape everything we create — from formulation to visuals to how the brand shows up.</p>",
         "image": "shopify://shop_images/our-story-image.webp",
-        "column_reverse": true
+        "reverse_content": true,
+        "dark_mode": false,
+        "bordered": false,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
-    "mind-japanese-influence": {
-      "type": "components-2-cols-content",
+    "components_content_2_cols_simple_KrNiYa": {
+      "type": "components-content-2-cols-simple",
+      "name": "Content 2 Cols Simple",
       "settings": {
         "title": "Mind — Japanese Influence",
         "description": "<p>Rooted in simplicity, intention, and restraint.</p><p>Inspired by Japanese philosophy, we believe clarity comes from doing less — but doing it well.</p><p>Our approach to hydration reflects this: thoughtful formulation, calm design, and a focus on consistency over intensity.</p><p>Hydration as intention.</p>",
-        "image": "shopify://shop_images/our-story-image.webp"
+        "image": "shopify://shop_images/our-story-image.webp",
+        "reverse_content": false,
+        "dark_mode": false,
+        "bordered": false,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
-    "body-movement-performance": {
-      "type": "components-2-cols-content",
+    "components_content_2_cols_simple_w6CPgB": {
+      "type": "components-content-2-cols-simple",
+      "name": "Content 2 Cols Simple",
       "settings": {
         "title": "Body — Movement & Performance",
         "description": "<p>Movement is not just sport. It's a way of life.</p><p>From training and competition to everyday motion, 40-LOVE supports bodies that move regularly and recover deliberately.</p><p>Electrolytes and collagen work together to support endurance, joints, and recovery — without overdoing it.</p><p>Built for the long game.</p>",
         "image": "shopify://shop_images/our-story-image.webp",
-        "column_reverse": true
+        "reverse_content": true,
+        "dark_mode": false,
+        "bordered": false,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
-    "soul-filipino-culture-travel": {
-      "type": "components-2-cols-content",
+    "components_content_2_cols_simple_WAy3T7": {
+      "type": "components-content-2-cols-simple",
+      "name": "Content 2 Cols Simple",
       "settings": {
         "title": "Soul — Filipino Culture & Travel",
         "description": "<p>Born in the Philippines, shaped by movement and travel.</p><p>Our sense of soul comes from warmth, openness, and connection — whether that's through sport, shared rituals, or places that ground us.</p><p>Nature, travel, and culture remind us why we move in the first place.</p><p>Hydration that fits into real life.</p>",
-        "image": "shopify://shop_images/our-story-image.webp"
+        "image": "shopify://shop_images/our-story-image.webp",
+        "reverse_content": false,
+        "dark_mode": false,
+        "bordered": false,
+        "background_color": "rgba(0,0,0,0)"
       }
     },
-    "still-in-the-game": {
-      "type": "components-2-cols-content",
+    "components_content_2_cols_simple_bzJ9nz": {
+      "type": "components-content-2-cols-simple",
+      "name": "Content 2 Cols Simple",
       "settings": {
         "title": "Still in the Game",
         "description": "<p>40-LOVE is for people who care about how they move, how they recover, and how they show up — today and for the long run.</p><p>Hydration with intention.</p><p>Fuel for mind, body, and soul.</p>",
         "image": "shopify://shop_images/our-story-image.webp",
-        "column_reverse": true,
-        "background_color": "#f9f8f6",
-        "show_border": true
+        "reverse_content": true,
+        "dark_mode": false,
+        "bordered": true,
+        "background_color": "#f9f8f6"
       }
     },
-    "our-difference": {
-      "type": "pages-about-us-our-difference",
+    "components_content_2_cols_Y8JtKw": {
+      "type": "components-content-2-cols",
+      "name": "Content 2 Cols",
       "settings": {
-        "diff_title": "What Makes 40-Love Different?",
-        "diff_desc": "<p>Not all sodium is the same. Sodium chloride, commonly known as table salt, is a fast-acting form that helps restore the sodium lost through sweat and supports hydration, muscle function, and nerve signaling. <br/><br/></p><p>Sodium citrate is a more advanced form, combining sodium with citric acid for smoother digestion and added benefits like buffering acid buildup in the body. It's especially helpful during endurance efforts, as it can reduce the risk of cramping and fatigue. 40-Love, uses a smart blend of both to deliver hydration that works hard and feels good.</p>",
-        "diff_image": "shopify://shop_images/our-difference.webp"
+        "title": "What Makes 40-Love Different?",
+        "description": "<p>Not all sodium is the same. Sodium chloride, commonly known as table salt, is a fast-acting form that helps restore the sodium lost through sweat and supports hydration, muscle function, and nerve signaling. <br/><br/>Sodium citrate is a more advanced form, combining sodium with citric acid for smoother digestion and added benefits like buffering acid buildup in the body. It’s especially helpful during endurance efforts, as it can reduce the risk of cramping and fatigue. 40-Love, uses a smart blend of both to deliver hydration that works hard and feels good.</p>",
+        "image": "shopify://shop_images/our-difference.webp",
+        "video_url": "",
+        "reverse_content": true,
+        "dark_mode": true,
+        "bordered": false
       }
     },
     "formula-highlight": {
       "type": "components-formula-highlight",
-      "settings": {
-        "formula_title": "The Ultimate Formula To Get Hydrated",
-        "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
-      },
       "blocks": {
         "key_ingredient_1": {
           "type": "key_ingredient",
@@ -150,7 +184,18 @@
           }
         }
       },
-      "block_order": ["key_ingredient_1", "key_ingredient_2", "key_ingredient_3", "key_ingredient_4", "key_ingredient_5", "key_ingredient_6"]
+      "block_order": [
+        "key_ingredient_1",
+        "key_ingredient_2",
+        "key_ingredient_3",
+        "key_ingredient_4",
+        "key_ingredient_5",
+        "key_ingredient_6"
+      ],
+      "settings": {
+        "formula_title": "The Ultimate Formula To Get Hydrated",
+        "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
+      }
     },
     "contact-us": {
       "type": "components-contact-us-form",
@@ -162,16 +207,16 @@
     }
   },
   "order": [
-    "banner",
-    "the-philosophy-behind-40-love",
-    "beyond-hydration",
-    "the-40-love-ethos",
-    "mind-body-soul",
-    "mind-japanese-influence",
-    "body-movement-performance",
-    "soul-filipino-culture-travel",
-    "still-in-the-game",
-    "our-difference",
+    "components_header_banner_dQLkWj",
+    "components_content_2_cols_simple_m8zJBb",
+    "components_content_2_cols_simple_xJrzAM",
+    "components_header_banner_JCHEGi",
+    "components_content_2_cols_simple_8VGTA9",
+    "components_content_2_cols_simple_KrNiYa",
+    "components_content_2_cols_simple_w6CPgB",
+    "components_content_2_cols_simple_WAy3T7",
+    "components_content_2_cols_simple_bzJ9nz",
+    "components_content_2_cols_Y8JtKw",
     "formula-highlight",
     "contact-us"
   ]
