@@ -23,12 +23,35 @@
         "button_link": "shopify://pages/pricing"
       }
     },
-    "product-slider": {
-      "type": "pages-home-product-slider",
-      "settings": {
-        "slider_collection": "product-slider",
-        "product_limit": 3
-      }
+    "components_main_product_slider_i4LVEd": {
+      "type": "components-main-product-slider",
+      "blocks": {
+        "product_DcFah8": {
+          "type": "product",
+          "settings": {
+            "product": "zesty-cucumber-lemon"
+          }
+        },
+        "product_JPx7EL": {
+          "type": "product",
+          "settings": {
+            "product": "zesty-lychee"
+          }
+        },
+        "product_bzLngx": {
+          "type": "product",
+          "settings": {
+            "product": "zesty-coconut"
+          }
+        }
+      },
+      "block_order": [
+        "product_DcFah8",
+        "product_JPx7EL",
+        "product_bzLngx"
+      ],
+      "name": "Main Product Slider",
+      "settings": {}
     },
     "cta-section": {
       "type": "pages-home-cta-section",
@@ -284,7 +307,7 @@
   },
   "order": [
     "components_headline_banner_gzPyqx",
-    "product-slider",
+    "components_main_product_slider_i4LVEd",
     "cta-section",
     "hero-section",
     "subscription-highlight",
