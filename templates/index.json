@@ -8,286 +8,291 @@
  * ------------------------------------------------------------
  */
 {
-    "layout": "homepage",
-    "sections": {
-        "banner": {
-            "type": "pages-home-banner",
-            "settings": {
-                "banner_title": "Pure Hydration, <br>Powered by Collagen<br> And Electrolytes",
-                "banner_description": "<p>Crave for fast hydration with collagen-infused drinks. </p>",
-                "banner_image": "shopify://shop_images/home-banner.webp",
-                "banner_show_payments": true,
-                "banner_review_writeup_1": "4.9-stars from 1,500+ Reviews",
-                "banner_review_writeup_2": "15,000+ Athletes hydrated"
-            }
-        },
-        "product-slider": {
-            "type": "pages-home-product-slider",
-            "settings": {
-                "slider_collection": "product-slider",
-                "product_limit": 3
-            }
-        }, 
-        "cta-section": {
-            "type": "pages-home-cta-section",
-            "settings": {
-                "cta_1_title": "Refresh, Replenish, and Radiate",
-                "cta_1_description": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>",
-                "cta_1_button_label": "Shop All Flavors",
-                "cta_1_button_link": "#",
-                "cta_2_title": "The Benefits of Collagen and Electrolytes Drink",
-                "cta_2_description": "<p>Hydration powers energy, focus, and performance, but water alone won't cut it. You need electrolytes to regulate fluid balance and maximize absorption.</p>",
-                "cta_2_button_label": "Learn More",
-                "cta_2_button_link": "#"
-            }
-        }, 
-        "hero-section": {
-            "type": "pages-home-hero-section", 
-            "settings": {
-                "hero_title": "Fuel Your Day, The Hydrated Way", 
-                "hero_description": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>",
-                "hero_button_label": "Shop All Flavors",
-                "hero_button_link": "#",
-                "hero_image": "shopify://shop_images/hero-image.webp",
-                "hero_background": "shopify://shop_images/hero-background.webp",
-            }
-        }, 
-        "subscription-highlight": {
-            "type": "components-subscription-highlight", 
-            "settings": {
-                "subscription_title": "Save 25% with Endless 40-LOVE", 
-                "subscription_desc": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
-                "subscription_button_label": "Subscribe & Save",
-                "subscription_button_link": "#"
-            }
-        }, 
-        "formula-highlight": {
-            "type": "components-formula-highlight", 
-            "settings": {
-                "formula_title": "The Ultimate Formula To Get Hydrated", 
-                "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
-            },
-            "blocks": {
-                "key_ingredient_1": {
-                    "type": "key_ingredient", 
-                    "settings": {
-                        "key_title": "Hydrolyzed Marine Collagen",
-                        "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
-                        "key_icon": "vector-marine-collagen.svg"
-                    }
-                }, 
-                "key_ingredient_2": {
-                    "type": "key_ingredient", 
-                    "settings": {
-                        "key_title": "Stevia",
-                        "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
-                        "key_icon": "vector-stevia.svg"
-                    }
-                }, 
-                "key_ingredient_3": {
-                    "type": "key_ingredient", 
-                    "settings": {
-                        "key_title": "Zinc",
-                        "key_desc": "<p>Improves focus, reduces stress, and enhances mental performance.</p>",
-                        "key_icon": "vector-zinc.svg"
-                    }
-                }, 
-                "key_ingredient_4": {
-                    "type": "key_ingredient", 
-                    "settings": {
-                        "key_title": "Magnesium",
-                        "key_desc": "<p>Relieves soreness, boosts energy production at a cellular level and aids muscle recovery.</p>",
-                        "key_icon": "vector-magnesium.svg"
-                    }
-                }, 
-                "key_ingredient_5": {
-                    "type": "key_ingredient", 
-                    "settings": {
-                        "key_title": "Sodium",
-                        "key_desc": "<p>Essential for hydration, reducing cramps, and boosting peak cellular performance.</p>",
-                        "key_icon": "vector-sodium.svg"
-                    }
-                }, 
-                "key_ingredient_6": {
-                    "type": "key_ingredient", 
-                    "settings": {
-                        "key_title": "Potassium",
-                        "key_desc": "<p>Accelerates recovery, regulates nerve signals, and fights muscle fatigue.</p>",
-                        "key_icon": "vector-potassium.svg"
-                    }
-                }, 
-            },
-            "block_order": [
-                "key_ingredient_1",
-                "key_ingredient_2",
-                "key_ingredient_3",
-                "key_ingredient_4",
-                "key_ingredient_5",
-                "key_ingredient_6"
-            ]
-        }, 
-        "new-product": {
-            "type": "components-new-product-arrival",
-            "settings": {
-                "new_arrival": "mixie",
-                "slider_collection": "product-slider",
-                "product_limit": 3,
-                "show_slider": true
-            }
-        },
-        "featured-testimonial": {
-            "type": "components-featured-testimonial",
-            "settings": {
-                "featured_testimonials": [
-                    "roy-de-guzman",
-                    "clarisse-jones"
-                ]
-            }
-        },
-        "faq-section": {
-            "type": "pages-home-faq-section",
-            "settings": {
-                "faq_title": "FAQ",
-                "faq_desc": "<p>If you don't see your question answered here, please don't hesitate to contact us or visit the extended FAQ section here.</p>"
-            },
-            "blocks": {
-                "faq_question_1": {
-                    "type": "faq_question",
-                    "settings": {
-                        "question": "What is 40-Loves Drinks?",
-                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
-                    }
-                },
-                "faq_question_2": {
-                    "type": "faq_question",
-                    "settings": {
-                        "question": "Can i drink 40-Loves Drinks even if i don't exercise?",
-                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
-                    }
-                },
-                "faq_question_3": {
-                    "type": "faq_question",
-                    "settings": {
-                        "question": "When should i drink 40-Loves Drinks?",
-                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
-                    }
-                },
-                "faq_question_4": {
-                    "type": "faq_question",
-                    "settings": {
-                        "question": "My doctor told me to cut down on salt, can I drink 40-Loves Drinks?",
-                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
-                    }
-                },
-                "faq_question_5": {
-                    "type": "faq_question",
-                    "settings": {
-                        "question": "How often can i drink 40-Loves Drinks?",
-                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
-                    }
-                }
-            },
-            "block_order": [
-                "faq_question_1",
-                "faq_question_2",
-                "faq_question_3",
-                "faq_question_4",
-                "faq_question_5"
-            ]
-        },
-        "brand-section": {
-            "type": "pages-home-brand-section", 
-            "settings": {
-                "brand_title": "Premier Wellness Brands",
-                "brand_desc": "<p>Trusted 40-Loves Drinks</p>",
-                "brand_image": "shopify://shop_images/trusted-brand-images.webp",
-            },
-            "blocks": {
-                "brand_1": {
-                    "type": "brand",
-                    "settings": {
-                        "brand_logo": "shopify://shop_images/encore-logo.webp"
-                    }
-                },
-                "brand_2": {
-                    "type": "brand",
-                    "settings": {
-                        "brand_logo": "shopify://shop_images/base-logo.webp"
-                    }
-                },
-                "brand_3": {
-                    "type": "brand",
-                    "settings": {
-                        "brand_logo": "shopify://shop_images/bpc-logo.webp"
-                    }
-                },
-                "brand_4": {
-                    "type": "brand",
-                    "settings": {
-                        "brand_logo": "shopify://shop_images/iron-hive-logo.webp"
-                    }
-                },
-                "brand_5": {
-                    "type": "brand",
-                    "settings": {
-                        "brand_logo": "shopify://shop_images/rbsc-logo.webp"
-                    }
-                },
-                "brand_6": {
-                    "type": "brand",
-                    "settings": {
-                        "brand_logo": "shopify://shop_images/training-ground-logo.webp"
-                    }
-                },
-                "brand_7": {
-                    "type": "brand",
-                    "settings": {
-                        "brand_logo": "shopify://shop_images/on-track-logo.webp"
-                    }
-                },
-                "brand_8": {
-                    "type": "brand",
-                    "settings": {
-                        "brand_logo": "shopify://shop_images/unreal-gym-logo.webp"
-                    }
-                },
-            },
-            "block_order": [
-                "brand_1",
-                "brand_2",
-                "brand_3",
-                "brand_4",
-                "brand_5",
-                "brand_6",
-                "brand_7",
-                "brand_8"
-            ]
-        },
-        "testimonial-section": {
-            "type": "components-testimonials",
-            "settings": {
-                "section_title": "Customer Testimonials", 
-                "testimonials": [
-                    "roy-de-guzman",
-                    "clarisse-jones",
-                    "cherry-natividad",
-                    "samuel-cheng",
-                    "john-camp"
-                ]
-            }
-        }
+  "layout": "homepage",
+  "sections": {
+    "components_headline_banner_gzPyqx": {
+      "type": "components-headline-banner",
+      "name": "Headline Banner",
+      "settings": {
+        "title": "hydration\nwith intention\nelectroytes + collagen",
+        "description": "<p>Crave for fast hydration with collagen-infused drinks. </p>",
+        "review_text": "<p>4.9-stars from 1,500+ Reviews</p><p>15,000+ Athletes hydrated</p>",
+        "image": "shopify://shop_images/1.jpg",
+        "show_payment_methods": true,
+        "button_label": "Shop Now",
+        "button_link": "shopify://pages/pricing"
+      }
     },
-    "order": [
-        "banner",
-        "product-slider",
-        "cta-section", 
-        "hero-section",
-        "subscription-highlight",
-        "formula-highlight", 
-        "new-product",
-        "featured-testimonial",
-        "faq-section",
-        "brand-section",    
-        "testimonial-section",
-    ]
+    "product-slider": {
+      "type": "pages-home-product-slider",
+      "settings": {
+        "slider_collection": "product-slider",
+        "product_limit": 3
+      }
+    },
+    "cta-section": {
+      "type": "pages-home-cta-section",
+      "settings": {
+        "cta_1_title": "Refresh, Replenish, and Radiate",
+        "cta_1_description": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>",
+        "cta_1_button_label": "Shop All Flavors",
+        "cta_1_button_link": "#",
+        "cta_2_title": "The Benefits of Collagen and Electrolytes Drink",
+        "cta_2_description": "<p>Hydration powers energy, focus, and performance, but water alone won't cut it. You need electrolytes to regulate fluid balance and maximize absorption.</p>",
+        "cta_2_button_label": "Learn More",
+        "cta_2_button_link": "#"
+      }
+    },
+    "hero-section": {
+      "type": "pages-home-hero-section",
+      "settings": {
+        "hero_title": "Fuel Your Day, The Hydrated Way",
+        "hero_description": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>",
+        "hero_button_label": "Shop All Flavors",
+        "hero_button_link": "#",
+        "hero_image": "shopify://shop_images/hero-image.webp",
+        "hero_background": "shopify://shop_images/hero-background.webp"
+      }
+    },
+    "subscription-highlight": {
+      "type": "components-subscription-highlight",
+      "settings": {
+        "subscription_title": "Save 25% with Endless 40-LOVE",
+        "subscription_desc": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
+        "subscription_button_label": "Subscribe & Save",
+        "subscription_button_link": "#"
+      }
+    },
+    "formula-highlight": {
+      "type": "components-formula-highlight",
+      "blocks": {
+        "key_ingredient_1": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Hydrolyzed Marine Collagen",
+            "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
+            "key_icon": "vector-marine-collagen.svg"
+          }
+        },
+        "key_ingredient_2": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Stevia",
+            "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
+            "key_icon": "vector-stevia.svg"
+          }
+        },
+        "key_ingredient_3": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Zinc",
+            "key_desc": "<p>Improves focus, reduces stress, and enhances mental performance.</p>",
+            "key_icon": "vector-zinc.svg"
+          }
+        },
+        "key_ingredient_4": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Magnesium",
+            "key_desc": "<p>Relieves soreness, boosts energy production at a cellular level and aids muscle recovery.</p>",
+            "key_icon": "vector-magnesium.svg"
+          }
+        },
+        "key_ingredient_5": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Sodium",
+            "key_desc": "<p>Essential for hydration, reducing cramps, and boosting peak cellular performance.</p>",
+            "key_icon": "vector-sodium.svg"
+          }
+        },
+        "key_ingredient_6": {
+          "type": "key_ingredient",
+          "settings": {
+            "key_title": "Potassium",
+            "key_desc": "<p>Accelerates recovery, regulates nerve signals, and fights muscle fatigue.</p>",
+            "key_icon": "vector-potassium.svg"
+          }
+        }
+      },
+      "block_order": [
+        "key_ingredient_1",
+        "key_ingredient_2",
+        "key_ingredient_3",
+        "key_ingredient_4",
+        "key_ingredient_5",
+        "key_ingredient_6"
+      ],
+      "settings": {
+        "formula_title": "The Ultimate Formula To Get Hydrated",
+        "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
+      }
+    },
+    "new-product": {
+      "type": "components-new-product-arrival",
+      "settings": {
+        "section_title": "",
+        "new_arrival": "mixie",
+        "slider_collection": "product-slider",
+        "product_limit": 3,
+        "show_slider": true,
+        "show_product_delivery_timeline": false,
+        "button_label_prefix": "GET"
+      }
+    },
+    "featured-testimonial": {
+      "type": "components-featured-testimonial",
+      "settings": {
+        "featured_testimonials": [
+          "roy-de-guzman",
+          "clarisse-jones"
+        ]
+      }
+    },
+    "faq-section": {
+      "type": "pages-home-faq-section",
+      "blocks": {
+        "faq_question_1": {
+          "type": "faq_question",
+          "settings": {
+            "question": "What is 40-Loves Drinks?",
+            "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+          }
+        },
+        "faq_question_2": {
+          "type": "faq_question",
+          "settings": {
+            "question": "Can i drink 40-Loves Drinks even if i don't exercise?",
+            "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+          }
+        },
+        "faq_question_3": {
+          "type": "faq_question",
+          "settings": {
+            "question": "When should i drink 40-Loves Drinks?",
+            "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+          }
+        },
+        "faq_question_4": {
+          "type": "faq_question",
+          "settings": {
+            "question": "My doctor told me to cut down on salt, can I drink 40-Loves Drinks?",
+            "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+          }
+        },
+        "faq_question_5": {
+          "type": "faq_question",
+          "settings": {
+            "question": "How often can i drink 40-Loves Drinks?",
+            "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_question_1",
+        "faq_question_2",
+        "faq_question_3",
+        "faq_question_4",
+        "faq_question_5"
+      ],
+      "settings": {
+        "faq_title": "FAQ",
+        "faq_desc": "<p>If you don't see your question answered here, please don't hesitate to contact us or visit the extended FAQ section here.</p>"
+      }
+    },
+    "brand-section": {
+      "type": "pages-home-brand-section",
+      "blocks": {
+        "brand_1": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/encore-logo.webp"
+          }
+        },
+        "brand_2": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/base-logo.webp"
+          }
+        },
+        "brand_3": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/bpc-logo.webp"
+          }
+        },
+        "brand_4": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/iron-hive-logo.webp"
+          }
+        },
+        "brand_5": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/rbsc-logo.webp"
+          }
+        },
+        "brand_6": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/training-ground-logo.webp"
+          }
+        },
+        "brand_7": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/on-track-logo.webp"
+          }
+        },
+        "brand_8": {
+          "type": "brand",
+          "settings": {
+            "brand_logo": "shopify://shop_images/unreal-gym-logo.webp"
+          }
+        }
+      },
+      "block_order": [
+        "brand_1",
+        "brand_2",
+        "brand_3",
+        "brand_4",
+        "brand_5",
+        "brand_6",
+        "brand_7",
+        "brand_8"
+      ],
+      "settings": {
+        "brand_title": "Premier Wellness Brands",
+        "brand_desc": "<p>Trusted 40-Loves Drinks</p>",
+        "brand_image": "shopify://shop_images/trusted-brand-images.webp"
+      }
+    },
+    "testimonial-section": {
+      "type": "components-testimonials",
+      "settings": {
+        "section_title": "Customer Testimonials",
+        "testimonials": [
+          "roy-de-guzman",
+          "clarisse-jones",
+          "cherry-natividad",
+          "samuel-cheng",
+          "john-camp"
+        ]
+      }
+    }
+  },
+  "order": [
+    "components_headline_banner_gzPyqx",
+    "product-slider",
+    "cta-section",
+    "hero-section",
+    "subscription-highlight",
+    "formula-highlight",
+    "new-product",
+    "featured-testimonial",
+    "faq-section",
+    "brand-section",
+    "testimonial-section"
+  ]
 }
