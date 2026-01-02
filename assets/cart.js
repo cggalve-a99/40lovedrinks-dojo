@@ -25,32 +25,7 @@
         })
         .catch(err => console.error('Cart update error:', err));
     }, 500); // ⏱ debounce delay
-
-    quantityHandlers = () => {
-        document.addEventListener('click', e => {
-        const button = e.target.closest('.qty-button');
-        if (!button) return;
-
-        const wrapper = button.closest('.product__qty');
-        const input = wrapper.querySelector('.product__qty--value');
-        const context = wrapper.dataset.context;
-        const line = wrapper.dataset.line;
-
-        let value = parseInt(input.value, 10) || 1;
-
-        if (button.dataset.operation === 'add') value++;
-        if (button.dataset.operation === 'minus' && value > 1) value--;
-
-        input.value = value;
-
-        // 🛒 CART PAGE ONLY
-        if (context === 'cart' && line) {
-            updateCart(line, value);
-        }
-    });
-    };
     
-    d.addEventListener("DOMContentLoaded", function() {
-        quantityHandlers();
+    d.addEventListener("DOMContentLoaded", function() {        
     });
 })(window, document);

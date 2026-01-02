@@ -21,8 +21,33 @@
       });
     });
   };
+  productSlider = () => {
+    const main = new Splide('#product-gallery', {
+      type: 'fade',
+      rewind: true,
+      pagination: false,
+      arrows: false,
+    });
+
+    const thumbs = new Splide('#product-gallery-thumbs', {
+      fixedWidth: 67,
+      fixedHeight: 67,
+      gap: 10,
+      arrows: false,
+      pagination: false,
+      isNavigation: true
+    });
+
+    main.sync(thumbs);
+    main.mount();
+    thumbs.mount();
+
+    d.querySelector('.custom-arrow--prev').addEventListener('click', () => main.go('<'));
+    d.querySelector('.custom-arrow--next').addEventListener('click', () => main.go('>'));
+  };
   d.addEventListener("DOMContentLoaded", function() {
     productDetails();
     productOptions();
+    productSlider();
   });
 })(window, document);

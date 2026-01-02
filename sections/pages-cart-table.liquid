@@ -1,77 +1,111 @@
-<section class="cart container">
-    <div class="">
-        <div class="cart__inner-wrapper">
-            <div class="cart__table-wrapper">
-                {% if cart.item_count > 0 %}
-                <form action="/cart" method="post" novalidate id="cart-form">
-                    <table class="cart__table">
-                        <thead class="cart__table--head">
-                            <tr class="cart__table--row">
-                                <th>{{ 'cart.labels.product' | t }}</th>
-                                <th>{{ 'cart.labels.quantity' | t }}</th>
-                                <th>{{ 'cart.labels.price' | t }}</th>
-                                <th>{{ 'cart.labels.total' | t }}</th>
-                            </tr>
-                        </thead>
-                        <tbody class="cart__table--body">
-                            {% for item in cart.items %}
-                            <tr class="cart__table--row">
-                                <td>
-                                    <div class="position-relative flex align-center justify-center flex-col cart__table--product-info">
-                                        <div class="cart__table--product-image">
-                                            <img 
-                                                src="{{ item | img_url: '500x', scale: 2 }}" 
-                                                alt="{{ item.title | escape }}" 
-                                                data-item-url="{{ item.url }}"
-                                                width="300"
-                                                height="300"
-                                            >
-                                        </div>
-                                        <div class="flex flex-col align-center justify-center cart__table--product-content">
-                                            <a 
-                                                href="{{ item.url }}" 
-                                                class="cart__table--product-title"
-                                            >
-                                                {{ item.product.title }}
-                                            </a>
-                                            <a 
-                                                href="/cart/change?line={{ forloop.index }}&amp;quantity=0" 
-                                                class="cart__table--remove-product" 
-                                                aria-label="{{ 'cart.labels.remove' | t }} {{ item.product.title }}"
-                                            >
-                                                {{ 'cart.labels.remove' | t }}
-                                            </a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    {% render 'product-quantity',
-                                        quantity: item.quantity,
-                                        line: forloop.index,
-                                        context: 'cart'
-                                    %}
-                                </td>
-                                <td class="cart__table--product-price">
-                                    {{ item.price | money }}
-                                </td>
-                                <td class="cart__table--product-price">
-                                    {{ item.final_line_price | money }}
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </form>
-                {% else  %}
-                <div class="text-center cart__table--empty">
-                    <h2 class="site-title__md">{{ 'cart.labels.empty-cart' | t }}</h2>
-                    <p>{{ 'cart.labels.empty-content' | t }}</p>
-                    <a href="/collections/all" class="btn bordered-black white">
-                        {{ 'cart.labels.shop-label' | t }}
-                    </a>
-                </div>
-                {% endif %}
-            </div>
+<section class="cart">
+  <div class="container">
+    <div class="cart__inner-wrapper">
+      <div class="cart__table-wrapper">
+        {% if cart.item_count > 0 %}
+        <form action="/cart" method="post" novalidate id="cart-form">
+            <table class="cart__table">
+              <thead class="cart__table--head">
+                <tr class="cart__table--row">
+                  <th>{{ 'cart.labels.product' | t }}</th>
+                  <th>{{ 'cart.labels.quantity' | t }}</th>
+                  <th>{{ 'cart.labels.price' | t }}</th>
+                  <th>{{ 'cart.labels.total' | t }}</th>
+                </tr>
+              </thead>
+              <tbody class="cart__table--body">
+                {% for item in cart.items %}
+                <tr class="cart__table--row">
+                  <td>
+                    <div class="position-relative flex align-center justify-center flex-col cart__table--product-info">
+                      <div class="cart__table--product-image">
+                        <img 
+                            src="{{ item | img_url: '500x', scale: 2 }}" 
+                            alt="{{ item.title | escape }}" 
+                            data-item-url="{{ item.url }}"
+                            width="300"
+                            height="300"
+                        >
+                      </div>
+                      <div class="flex flex-col align-center justify-center cart__table--product-content">
+                        <a 
+                            href="{{ item.url }}" 
+                            class="cart__table--product-title"
+                        >
+                            {{ item.product.title }}
+                        </a>
+                        <a 
+                            href="/cart/change?line={{ forloop.index }}&amp;quantity=0" 
+                            class="cart__table--remove-product" 
+                            aria-label="{{ 'cart.labels.remove' | t }} {{ item.product.title }}"
+                        >
+                            {{ 'cart.labels.remove' | t }}
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    {% render 'product-quantity',
+                        quantity: item.quantity,
+                        line: forloop.index,
+                        context: 'cart'
+                    %}
+                  </td>
+                  <td class="cart__table--product-price">
+                    {{ item.price | money }}
+                  </td>
+                  <td class="cart__table--product-price">
+                    {{ item.final_line_price | money }}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        </form>
+        {% else  %}
+        <div class="text-center cart__table--empty">
+          <h2 class="site-title__md">{{ 'cart.labels.empty-cart' | t }}</h2>
+          <p>{{ 'cart.labels.empty-content' | t }}</p>
+          <a href="/collections/all" class="btn bordered-black white">
+            {{ 'cart.labels.shop-label' | t }}
+          </a>
         </div>
+        {% endif %}
+      </div>
+      <div class="cart__summary">
+        <h3 class="cart__summary--title">{{ 'cart.labels.summary' | t }}</h3>
+        <div class="cart__summary--row">
+          <span>{{ 'cart.labels.subtotal' | t }}</span>
+          <span>{{ cart.items_subtotal_price  | money }}</span>
+        </div>
+        <div class="cart__summary--row">
+          <span>{{ 'cart.labels.total' | t }}</span>
+          <span>{{ cart.total_price | money }}</span>
+        </div>
+        <div class="cart__summary--row">
+          <span>Shipping:</span>
+          <span>
+            {% if cart.requires_shipping %}
+              Calculated at checkout
+            {% else %}
+              —
+            {% endif %}
+          </span>
+        </div>
+        <div class="cart__summary--row">
+          <span>Taxes:</span>
+          <span>Calculated at checkout</span>
+        </div>
+        <form action="{{ routes.cart_url }}" method="post" class="cart__summary--checkout-form">
+          <button
+            type="submit"
+            name="checkout"
+            class="btn"
+          >
+            Proceed to Checkout
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
 </section>

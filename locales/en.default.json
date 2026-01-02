@@ -30,15 +30,18 @@
     "add": "Add to Cart",
     "buy": "Buy it now",
     "labels": {
-        "product": "Product",
-        "price": "Price",
-        "quantity": "Quantity",
-        "total": "Total",
-        "subtotal": "Subtotal",
-        "empty-cart": "Your Cart is Empty",
-        "empty-content": "Browse our products and find something you’ll love.",
-        "remove": "Remove item",
-        "shop-label": "Shop Now"
+      "product": "Product",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "subtotal": "Subtotal",
+      "shipping" : "Shipping", 
+      "empty-cart": "Your Cart is Empty",
+      "empty-content": "Browse our products and find something you’ll love.",
+      "remove": "Remove item",
+      "shop-label": "Shop Now",
+      "summary": "Order Summary",
+      "checkout": "Proceed to Checkout"
     }
   },
   "customers": {

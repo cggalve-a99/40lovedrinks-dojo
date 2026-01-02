@@ -26,10 +26,10 @@
     "components_main_product_slider_i4LVEd": {
       "type": "components-main-product-slider",
       "blocks": {
-        "product_DcFah8": {
+        "product_bzLngx": {
           "type": "product",
           "settings": {
-            "product": "zesty-cucumber-lemon"
+            "product": "zesty-coconut"
           }
         },
         "product_JPx7EL": {
@@ -38,23 +38,24 @@
             "product": "zesty-lychee"
           }
         },
-        "product_bzLngx": {
+        "product_DcFah8": {
           "type": "product",
           "settings": {
-            "product": "zesty-coconut"
+            "product": "zesty-cucumber-lemon"
           }
         }
       },
       "block_order": [
-        "product_DcFah8",
+        "product_bzLngx",
         "product_JPx7EL",
-        "product_bzLngx"
+        "product_DcFah8"
       ],
       "name": "Main Product Slider",
       "settings": {}
     },
     "cta-section": {
       "type": "pages-home-cta-section",
+      "disabled": true,
       "settings": {
         "cta_1_title": "Refresh, Replenish, and Radiate",
         "cta_1_description": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>",
@@ -68,6 +69,7 @@
     },
     "hero-section": {
       "type": "pages-home-hero-section",
+      "disabled": true,
       "settings": {
         "hero_title": "Fuel Your Day, The Hydrated Way",
         "hero_description": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>",
@@ -77,8 +79,33 @@
         "hero_background": "shopify://shop_images/hero-background.webp"
       }
     },
+    "components_content_2_cols_UJnphH": {
+      "type": "components-content-2-cols",
+      "name": "Content 2 Cols",
+      "settings": {
+        "title": "Built for Those Still in the Game",
+        "description": "<p>In tennis, <em>40-LOVE</em> is a winning position — but the match isn’t over yet.</p><p>There’s still another point to play.</p><p>40-LOVE was created for people who care about how they move, how they recover, and how they show up — today and for the long game.</p><p>Not extremes. Not shortcuts. Just thoughtful hydration, designed to support consistency over time.</p>",
+        "image": "shopify://shop_images/home-banner.webp",
+        "video_url": "",
+        "reverse_content": false,
+        "dark_mode": false,
+        "bordered": true
+      }
+    },
+    "components_highlight_content_948RFf": {
+      "type": "components-highlight-content",
+      "name": "Highlight Content",
+      "settings": {
+        "title": "Save 25% with Endless 40-LOVE",
+        "description": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
+        "button_label": "SUBSCRIBE & SAVE",
+        "button_link": "shopify://pages/pricing",
+        "background_image": "shopify://shop_images/subscription-highlight.webp"
+      }
+    },
     "subscription-highlight": {
       "type": "components-subscription-highlight",
+      "disabled": true,
       "settings": {
         "subscription_title": "Save 25% with Endless 40-LOVE",
         "subscription_desc": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
@@ -153,6 +180,7 @@
     },
     "new-product": {
       "type": "components-new-product-arrival",
+      "disabled": true,
       "settings": {
         "section_title": "",
         "new_arrival": "mixie",
@@ -165,11 +193,25 @@
     },
     "featured-testimonial": {
       "type": "components-featured-testimonial",
+      "disabled": true,
       "settings": {
         "featured_testimonials": [
           "roy-de-guzman",
           "clarisse-jones"
         ]
+      }
+    },
+    "components_content_2_cols_UHAzhc": {
+      "type": "components-content-2-cols",
+      "name": "Content 2 Cols",
+      "settings": {
+        "title": "Why Electrolytes + Collagen",
+        "description": "<ul><li>Supports hydration and endurance</li><li>Supports joints and recovery</li><li>Designed for daily use</li></ul>",
+        "image": "shopify://shop_images/10.jpg",
+        "video_url": "",
+        "reverse_content": true,
+        "dark_mode": true,
+        "bordered": false
       }
     },
     "faq-section": {
@@ -285,6 +327,7 @@
         "brand_7",
         "brand_8"
       ],
+      "disabled": true,
       "settings": {
         "brand_title": "Premier Wellness Brands",
         "brand_desc": "<p>Trusted 40-Loves Drinks</p>",
@@ -293,6 +336,7 @@
     },
     "testimonial-section": {
       "type": "components-testimonials",
+      "disabled": true,
       "settings": {
         "section_title": "Customer Testimonials",
         "testimonials": [
@@ -310,10 +354,13 @@
     "components_main_product_slider_i4LVEd",
     "cta-section",
     "hero-section",
+    "components_content_2_cols_UJnphH",
+    "components_highlight_content_948RFf",
     "subscription-highlight",
     "formula-highlight",
     "new-product",
     "featured-testimonial",
+    "components_content_2_cols_UHAzhc",
     "faq-section",
     "brand-section",
     "testimonial-section"

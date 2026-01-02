@@ -1,0 +1,74 @@
+<div class="product__details--media">
+  {% assign media_count = product.media | size %}
+
+  {% if media_count > 1 %}
+    <!-- Splide Gallery -->
+    <div id="product-gallery" class="splide product__details--media-container" style="background-color: var(--{{ background }})">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for media in product.media %}
+            {% if media.media_type == 'image' %}
+              <li class="splide__slide">
+                <img 
+                  src="{{ media | image_url: width: 1600 }}" 
+                  alt="{{ media.alt | escape }}" 
+                  class="product__image" 
+                  loading="lazy" 
+                  width="100%" 
+                  height="600"
+                >
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Custom Arrows -->
+      <div class="product__gallery-arrows">
+        <button class="custom-arrow custom-arrow--prev" aria-label="Previous">
+          <!-- Your custom SVG for previous -->
+          {{ 'icon-caret-left.svg' | inline_asset_content }}
+        </button>
+        <button class="custom-arrow custom-arrow--next" aria-label="Next">
+          <!-- Your custom SVG for next -->
+          {{ 'icon-caret-right.svg' | inline_asset_content }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Thumbnails -->
+    <div id="product-gallery-thumbs" class="splide product__details--media-thumbs">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for media in product.media %}
+            {% if media.media_type == 'image' %}
+              <li class="splide__slide">
+                <img 
+                  src="{{ media | image_url: width: 200 }}" 
+                  alt="{{ media.alt | escape }}" 
+                  class="product__thumb" 
+                  loading="lazy"
+                  width="67"
+                  height="67"
+                >
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    
+  {% else %}
+    <!-- Single Image Fallback -->
+    <div class="product__details--media-container" style="background-color: var(--{{ background }})">
+      <img 
+        src="{{ product.featured_image | image_url: width: 1600 }}" 
+        alt="{{ product.title | escape }}" 
+        class="product__image" 
+        loading="lazy" 
+        width="100%" 
+        height="600"
+      >
+    </div>
+  {% endif %}
+</div>
