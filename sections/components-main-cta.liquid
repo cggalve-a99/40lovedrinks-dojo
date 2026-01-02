@@ -6,12 +6,14 @@
         {% if grid_count > 4 %}
           {% assign grid_count = 4 %}
         {% endif %}
-        <div class="main-cta__list
-                {% if section.settings.display_button != blank %}
-                  with-button
-                {% endif %}
-            " 
-            style="grid-template-columns: repeat({{ grid_count }}, 1fr);"
+        <div
+          class="
+            main-cta__list
+            {% if section.settings.display_button != blank %}
+              with-button
+            {% endif %}
+          "
+          style="grid-template-columns: repeat({{ grid_count }}, 1fr);"
         >
           {% for block in section.blocks %}
             <div class="main-cta__item" {{ block.shopify_attributes }}>
@@ -37,7 +39,10 @@
                   </div>
                 {% endif %}
               </div>
-              {% if section.settings.display_button and block.settings.button_label != blank and block.settings.button_link != blank %}
+              {% if section.settings.display_button
+                and block.settings.button_label != blank
+                and block.settings.button_link != blank
+              %}
                 <a href="{{ block.settings.button_link }}" class="btn main-cta__item--button">
                   {{ block.settings.button_label }}
                 </a>
@@ -104,7 +109,43 @@
   "presets": [
     {
       "name": "Main CTA",
-      "category": "DOJO"
+      "category": "DOJO",
+      "settings": {
+        "grid_items": 3,
+        "display_button": false
+      },
+      "blocks": [
+        {
+          "type": "cta_item",
+          "settings": {
+            "title": "Designed With Intention",
+            "description": "<p>Inspired by Japanese principles of restraint, balance, and doing less — but better.</p>",
+            "image": "shopify://shop_images/7.jpg",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        {
+          "type": "cta_item",
+          "settings": {
+            "title": "For the Long Game",
+            "description": "<p>Created for people who are still moving, still training, and still showing up — without shortcuts.</p>",
+            "image": "shopify://shop_images/6.jpg",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        {
+          "type": "cta_item",
+          "settings": {
+            "title": "Grounded Where We’re From",
+            "description": "<p>Shaped by Filipino warmth, openness, and connection. Manufactured in the Philippines, where daily movement and shared rituals are part of life.</p>",
+            "image": "shopify://shop_images/9.jpg",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      ]
     }
   ]
 }
