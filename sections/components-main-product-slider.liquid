@@ -1,0 +1,76 @@
+{% if section.blocks.size > 0 %}
+  <section class="main-product-slider">
+    <div class="container">
+      <div class="product-slider">
+        <div class="splide product-slider-element" id="main-product-slider-{{ section.id }}">
+          <div class="splide__track">
+            <div class="splide__list">
+              {% for block in section.blocks %}
+                {% if block.settings.product != blank %}
+                  {% assign selectedProduct = all_products[block.settings.product] %}
+                  {% if selectedProduct != blank %}
+                    <div class="splide__slide">
+                      {% assign product_excerpt = selectedProduct.metafields.custom.excerpt
+                        | metafield_tag
+                        | strip_html
+                      %}
+                      {% render 'components-product-card-new',
+                        product_image: selectedProduct.featured_image,
+                        product_title: selectedProduct.title,
+                        product_excerpt: product_excerpt,
+                        product_price: selectedProduct.price,
+                        product_url: selectedProduct.url
+                      %}
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="main-product-slider__navigation">
+            <div
+              class="btn circle transparent bordered-black product-slider__arrow"
+              id="product-slider-prev"
+              data-id="-1"
+            >
+              {{ 'icon-caret-left.svg' | inline_asset_content }}
+            </div>
+            <div
+              class="btn circle transparent bordered-black product-slider__arrow"
+              id="product-slider-next"
+              data-id="+1"
+            >
+              {{ 'icon-caret-right.svg' | inline_asset_content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Main Product Slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Product Slider",
+      "category": "Sections"
+    }
+  ]
+}
+{% endschema %}

@@ -2292,3 +2292,33 @@ section.headline-banner .headline-banner__image:after {
     padding-block: 56px;
   }
 }
+
+/**************************************************
+ * Section: Main Product Slider
+ **************************************************/
+section.main-product-slider {
+  padding-block: 64px;
+}
+section.main-product-slider .main-product-slider__navigation {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 56px;
+}
+section.main-product-slider .product-slider {
+  margin-block: 0;
+  margin-inline: 0;
+}
+section.main-product-slider .splide__track {
+  padding-block: 1px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  section.main-product-slider {
+    padding-block: 56px;
+  }
+  section.main-product-slider .main-product-slider__navigation {
+    margin-block-start: 24px;
+  }
+}
