@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+    "layout": "cart",
+    "sections": {
+        "banner": {
+            "type": "components-banner",
+            "settings": {
+                "collection_banner_title": "Your Shopping Cart",
+                "collection_banner_desc": "<p>Review your items, update quantities, and proceed to checkout with ease.</p>"
+            }
+        },
+        "table": {
+            "type": "pages-cart-table",
+            "settings": {}
+        }
+    }, 
+    "order": [
+        "banner", 
+        "table"
+    ]
+}

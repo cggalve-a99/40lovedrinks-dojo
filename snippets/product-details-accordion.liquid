@@ -113,9 +113,11 @@
     {% endif %}
 
     {% # View More Button # %}
-    <div class="product__description--button">
-        <button type="button" class="btn white bordered-black" id="show-more-details" data-value="more">
-            View More
-        </button>
-    </div> 
+    {% if precaution != blank or how_to_take != blank or important_reminders != blank or storage_instructions != blank or ingredients != blank or delivery_details != blank or product_benefits != blank %}
+        <div class="product__description--button">
+            <button type="button" class="btn white bordered-black" id="show-more-details" data-value="more">
+                View More
+            </button>
+        </div> 
+    {% endif %}
 </div>

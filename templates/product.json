@@ -14,6 +14,47 @@
             "type": "pages-product-section-details",
             "settings": {}
         },
+        "product-reviews": {
+            "type": "pages-product-section-reviews",
+            "settings": {
+                "delivery_banner_title": "Fast Delivery",
+                "delivery_banner_text": "<p>Two day delivery on most in-stock items.</p>",
+            },
+            "blocks": {
+                "review_1": {
+                    "type": "review",
+                    "settings": {
+                        "reviewer_name": "Carl Johnson", 
+                        "review_text": "It has become my everyday recipe for good hydration and recovery, be it at the gym or playing golf. It’s the perfect product I had been looking for a while, knowing I was finding it difficult to stay properly hydrated under the Philippine climate.",
+                        "review_date": "25-10-2025",
+                        "reviewer_image": "shopify://shop_images/samuel-cheng.webp"
+                    }
+                },
+                "review_2": {
+                    "type": "review",
+                    "settings": {
+                        "reviewer_name": "Carl Johnson", 
+                        "review_text": "It has become my everyday recipe for good hydration and recovery, be it at the gym or playing golf. It’s the perfect product I had been looking for a while, knowing I was finding it difficult to stay properly hydrated under the Philippine climate.",
+                        "review_date": "25-10-2025",
+                        "reviewer_image": "shopify://shop_images/samuel-cheng.webp"
+                    }
+                },
+                "review_3": {
+                    "type": "review",
+                    "settings": {
+                        "reviewer_name": "Carl Johnson", 
+                        "review_text": "It has become my everyday recipe for good hydration and recovery, be it at the gym or playing golf. It’s the perfect product I had been looking for a while, knowing I was finding it difficult to stay properly hydrated under the Philippine climate.",
+                        "review_date": "25-10-2025",
+                        "reviewer_image": "shopify://shop_images/samuel-cheng.webp"
+                    }
+                },
+            }, 
+            "block_order": [
+                "review_1",
+                "review_2",
+                "review_3"
+            ]
+        },
         "faq-section": {
             "type": "pages-home-faq-section",
             "settings": {
@@ -69,7 +110,6 @@
             "type": "pages-product-section-related",
             "settings": {}
         },
-        
         "ingredients": {
             "type": "components-nutritional-value", 
             "settings": {
@@ -115,6 +155,7 @@
     },
     "order": [
         "product-details",
+        "product-reviews",
         "faq-section",
         "related-products",
         "ingredients"

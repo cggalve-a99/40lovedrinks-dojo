@@ -1,13 +1,38 @@
-<div class="product__qty">
+{% assign qty = quantity | default: 1 %}
+{% assign context = context | default: 'product' %}
+
+<div 
+  class="product__qty"
+  data-context="{{ context }}"
+  {% if line %}
+    data-line="{{ line }}"
+  {% endif %}
+>
     <h4>Quantity</h4>
+
     <div class="flex align-center justify-between product__qty--inner-wrapper">
-        <button class="btn white bordered-black qty-button" data-operation="minus">
+        <button
+            type="button"
+            class="btn white bordered-black qty-button"
+            data-operation="minus"
+        >
             {{ 'icon-minus.svg' | inline_asset_content }}
         </button>
-        <div class="product__qty--value">
-            1
-        </div>
-        <button class="btn white bordered-black qty-button" data-operation="add">
+
+        <input
+            type="text"
+            class="product__qty--value"
+            name="{% if context == 'cart' %}updates[]{% else %}quantity{% endif %}"
+            value="{{ qty }}"
+            id="quantity"
+            min="1"
+        >
+
+        <button
+            type="button"
+            class="btn white bordered-black qty-button"
+            data-operation="add"
+        >
             {{ 'icon-plus.svg' | inline_asset_content }}
         </button>
     </div>

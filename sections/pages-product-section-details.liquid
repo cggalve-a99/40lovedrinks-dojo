@@ -3,6 +3,10 @@
 {% assign product_image_url = product.featured_image | img_url: '500x' %}
 {% assign price = product.price %}
 
+{% if long_title == blank %}
+    {% assign long_title = product.title %}
+{% endif %}
+
 <section class="product__details">
     <div class="container">
         <div class="flex flex-wrap align-start justify-between product__details--inner-wrapper">
@@ -31,17 +35,25 @@
                     {% render 'product-subscription-banner', 
                         background: background
                     %}
-
-                    {%# Purchase Options #%}
-                    {% render 'product-purchase-option', 
-                        price: price
-                    %}
-
-                    {%# Product Quantity #%}
-                    {% render 'product-quantity' %}
-
-                    {%# Add to Cart #%}
-                    {% render 'product-add-to-cart' %}
+                    
+                    {%# Product Form #%}
+                    {% form 'product', product, class: 'product__form', id: "product-form-{{ product.id }}" %}
+                    {% comment%} <form 
+                        id="product-form-{{ product.id }}" 
+                        action="/cart/add" 
+                        method="post" 
+                        enctype="multipart/form-data" 
+                        class="product__form"
+                    > {% endcomment %}
+                        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                        {%# Purchase Options #%}
+                        {% render 'product-purchase-option' %}
+                        {%# Product Quantity #%}
+                        {% render 'product-quantity' %}
+                        {%# Add to Cart #%}
+                        {% render 'product-add-to-cart' %}
+                    {% comment %} </form> {% endcomment %}
+                    {% endform %}
 
                     {%# Payment List #%}
                     {% render 'global-payment-methods' %}

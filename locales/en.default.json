@@ -26,7 +26,20 @@
     "checkout": "Checkout",
     "title": "Cart",
     "update": "Update",
-    "remove": "Remove"
+    "remove": "Remove",
+    "add": "Add to Cart",
+    "buy": "Buy it now",
+    "labels": {
+        "product": "Product",
+        "price": "Price",
+        "quantity": "Quantity",
+        "total": "Total",
+        "subtotal": "Subtotal",
+        "empty-cart": "Your Cart is Empty",
+        "empty-content": "Browse our products and find something you’ll love.",
+        "remove": "Remove item",
+        "shop-label": "Shop Now"
+    }
   },
   "customers": {
     "login": {

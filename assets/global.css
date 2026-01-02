@@ -106,13 +106,25 @@ body {
 
 /** Breakpoints **/
 :root {
-  --zesty-coconut: #e5fff2;
-  --zesty-coconut-50: #00b75b;
-  --zesty-coconut-80: #42643e;
-  --zesty-lychee: #ffe8ef;
-  --winty: #fbdec0;
-  --zesty-cucumber-lemon: #fcfbd2;
-  --mixie: #ffb5cc;
+    --zesty-coconut: #E5FFF2;
+    --zesty-coconut-50: #00B75B;
+    --zesty-coconut-80: #42643E;
+
+    --zesty-lychee: #FFE8EF;
+    --zesty-lychee-50: #E2CBD2;
+        --zesty-lychee-80: #665D5F;
+
+    --winty: #FBDEC0;
+    --winty-50: #DAC1A3;
+    --winty-80: #64594D;
+
+    --zesty-cucumber-lemon: #FCFBD2;
+    --zesty-cucumber-lemon-50: #DFDEB5;
+    --zesty-cucumber-lemon-80: #656454;
+
+    --mixie: #FFB5CC;
+    --mixie-50: #E298AF;
+    --mixie-80: #664851;
 }
 
 p {
@@ -998,12 +1010,27 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
+  position: relative;
 }
 .header__icons img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+.header__icons sup {
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: rgb(222, 60, 60);
+  color: var(--color-secondary);
+  border-radius: 50%;
 }
 
 .promo-header {

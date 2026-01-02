@@ -1,0 +1,178 @@
+<section class="product__reviews">
+    <div class="container">
+        <div class="product__reviews--inner-wrapper">
+            <div class="text-center product__reviews--delivery-banner">
+                <div class="product__reviews--delivery-icon">
+                    {{ 'icon-package.svg' | inline_asset_content }}
+                </div>
+                <h3>{{ section.settings.delivery_banner_title }}</h3>
+                {{ section.settings.delivery_banner_text }}
+            </div>
+            <div class="product__reviews--total-reviews">
+                <div class="product__reviews--average-rating">
+                    <h4>5</h4>
+                    <div class="flex align-center justify-center product__reviews--ratings">
+                        {% for i in (1..5) %}
+                            <span>
+                                {{ 'icon-star.svg' | inline_asset_content }}
+                            </span>
+                        {% endfor %}
+                    </div>
+                    <p>10 reviews</p>
+                </div>
+                <div class="product__reviews--per-rating">
+                    {% for i in (1..5) reversed %}
+                    <div class="flex align-center product__reviews--per-rating-item">
+                        <div class="flex align-center product__reviews--rating-header">
+                            <h4>{{ i }}</h4>
+                            <span>{{ 'icon-star.svg' | inline_asset_content }}</span>
+                        </div>
+                        <div class="product__reviews--rating-bar">
+                            <div class="product__reviews--rating-bar-fill" style="width: 
+                                {% if forloop.first %}
+                                    {{ i | times: 20 }}%
+                                {% else %}
+                                    0%
+                                {% endif %};
+                            "></div>
+                        </div>
+                        <div class="product__reviews--rating-count">
+                            {% if forloop.first %}
+                                <span>10 reviews</span>
+                            {% else %}
+                                <span>0 reviews</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="product__reviews--write-review">
+                    <button type="button" class="btn">
+                        Write a Review
+                    </button>
+                </div>
+            </div>
+            <div class="product__reviews--list">
+                {% for block in section.blocks limit: section.settings.number_of_reviews %}
+                    <div class="product__reviews--list-item">
+                        <div class="product__reviews--review-info">
+                            <div class="product__reviews--avatar">
+                                {% if block.settings.reviewer_avatar != blank %}
+                                    <img 
+                                        src="{{ block.settings.reviewer_avatar | img_url: '100x100' }}" 
+                                        alt="{{ block.settings.reviewer_name }}"
+                                        width="64"
+                                        height="64"
+                                    >
+                                {% else %}
+                                    <span>{{ block.settings.reviewer_name | slice: 0, 1 }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="product__reviews--name">
+                                <h4>
+                                    {{ block.settings.reviewer_name }}
+                                    {{ 'icon-check-green.svg' | inline_asset_content }}
+                                </h4>
+                                <p>{{ block.settings.review_date }}</p>
+                            </div>
+                        </div>
+                        <div class="product__reviews--reviewer-ratings">
+                            <div class="flex align-center product__reviews--ratings">
+                                {% for i in (1..5) %}
+                                    <span>
+                                        {% if i <= block.settings.review_rating %}
+                                            {{ 'icon-star.svg' | inline_asset_content }}
+                                        {% else %}
+                                            {{ 'icon-star-outline.svg' | inline_asset_content }}
+                                        {% endif %}
+                                    </span>
+                                {% endfor %}
+                            </div> 
+                        </div>
+                        <div class="product__reviews--review-text">
+                            <p>{{ block.settings.review_text }}</p>
+                        </div>
+                        <div class="product__reviews--reviewer-image">
+                            {% if block.settings.reviewer_image != blank %}
+                                <img 
+                                    src="{{ block.settings.reviewer_image | img_url: '500x' }}" 
+                                    alt="{{ block.settings.reviewer_name }}"
+                                    width="100"
+                                    height="100"
+                                >
+                            {% endif %}
+                        </div>  
+                    </div>
+                {% endfor %}  
+            </div>
+            <div class="product__reviews--see-all-reviews">
+                <button type="button" class="btn">
+                    See More Reviews
+                </button>
+            </div>  
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Product Reviews Section",
+    "settings": [
+        {
+            "type": "text", 
+            "id": "delivery_banner_title",
+            "label": "Delivery Banner Title"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "delivery_banner_text",
+            "label": "Delivery Banner Text"
+        },         
+        {
+            "type": "number", 
+            "id": "number_of_reviews",
+            "label": "Number of Reviews to Show",
+            "default": 3 
+        }
+    ],
+    "blocks": [
+        {
+            "type": "review",
+            "name": "Review",
+            "settings": [
+                {
+                    "type": "image_picker", 
+                    "id": "reviewer_avatar",
+                    "label": "Reviewer Avatar"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "reviewer_image",
+                    "label": "Reviewer Image"   
+                },
+                {
+                    "type": "text",
+                    "id": "reviewer_name",
+                    "label": "Reviewer Name"
+                },
+                {
+                    "type": "text",
+                    "id": "review_date",
+                    "label": "Review Date"
+                },
+                {
+                    "type": "textarea",
+                    "id": "review_text",
+                    "label": "Review Text"
+                },
+                {
+                    "type": "number",
+                    "id": "review_rating",
+                    "label": "Review Rating (1-5)",
+                    "default": 5
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

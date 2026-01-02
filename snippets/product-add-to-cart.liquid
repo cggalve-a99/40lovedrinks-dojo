@@ -1,10 +1,18 @@
 <div class="flex align-center justify-center product__cart">
-    <button class="btn">
-        Add to Card 
+    <button 
+        type="submit"
+        name="add"
+        class="btn"
+    >
+        {{ 'cart.add' | t }}
         {{ 'icon-shopping-cart.svg' | inline_asset_content }}
     </button>
-    <button class="btn white bordered-black">
-        Buy it now
+    <button 
+        type="submit"
+        name="checkout"
+        class="btn white bordered-black"
+    >
+        {{ 'cart.buy' | t }}
         {{ 'icon-shopping-bag.svg' | inline_asset_content }}
     </button>
 </div>
