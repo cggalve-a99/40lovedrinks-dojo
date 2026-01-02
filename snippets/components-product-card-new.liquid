@@ -16,10 +16,12 @@
         <div class="product-card-new__item--content-inner">
             <div class="product-card-new__item--header">
                 <h3 class="product-card-new__item--title site-title__md">{{ product_title }}</h3>
+                {% unless show_price == false %}
                 <span class="product-card-new__item--price site-title__lg">{{ product_price | money }}</span>
+                {% endunless %}
             </div>
             {% if product_excerpt != blank %}
-                <div class="product-card-new__item--excerpt">{{ product_excerpt }}</div>
+                <div class="product-card-new__item--excerpt general-content-container">{{ product_excerpt }}</div>
             {% endif %}
         </div>
     </div>

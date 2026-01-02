@@ -10,16 +10,19 @@
                   {% assign selectedProduct = all_products[block.settings.product] %}
                   {% if selectedProduct != blank %}
                     <div class="splide__slide">
-                      {% assign product_excerpt = selectedProduct.metafields.custom.excerpt
-                        | metafield_tag
-                        | strip_html
-                      %}
+                      {% assign product_title = block.settings.title | default: selectedProduct.title %}
+                      {% if block.settings.description != blank %}
+                        {% assign product_excerpt = block.settings.description %}
+                      {% else %}
+                        {% assign product_excerpt = selectedProduct.metafields.custom.excerpt | metafield_tag %}
+                      {% endif %}
                       {% render 'components-product-card-new',
                         product_image: selectedProduct.featured_image,
-                        product_title: selectedProduct.title,
+                        product_title: product_title,
                         product_excerpt: product_excerpt,
                         product_price: selectedProduct.price,
-                        product_url: selectedProduct.url
+                        product_url: selectedProduct.url,
+                        show_price: section.settings.show_price
                       %}
                     </div>
                   {% endif %}
@@ -52,7 +55,14 @@
 {% schema %}
 {
   "name": "Main Product Slider",
-  "settings": [],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show Price",
+      "default": true
+    }
+  ],
   "blocks": [
     {
       "type": "product",
@@ -62,6 +72,18 @@
           "type": "product",
           "id": "product",
           "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Override product title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "info": "Override product description"
         }
       ]
     }
@@ -69,7 +91,35 @@
   "presets": [
     {
       "name": "Main Product Slider",
-      "category": "Sections"
+      "category": "DOJO",
+      "settings": {
+        "show_price": true
+      },
+      "blocks": {
+        "product_DcFah8": {
+          "type": "product",
+          "settings": {
+            "product": "zesty-cucumber-lemon"
+          }
+        },
+        "product_JPx7EL": {
+          "type": "product",
+          "settings": {
+            "product": "zesty-lychee"
+          }
+        },
+        "product_bzLngx": {
+          "type": "product",
+          "settings": {
+            "product": "zesty-coconut"
+          }
+        }
+      },
+      "block_order": [
+        "product_DcFah8",
+        "product_JPx7EL",
+        "product_bzLngx"
+      ],
     }
   ]
 }
